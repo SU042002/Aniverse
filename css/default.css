@@ -2,12 +2,12 @@
 /* CSS Document */
 
 body {
-    background-image: linear-gradient(to right, #ffffff , #F7CAC9);
+    background-image: linear-gradient(to right, #F7CAC9 , #FA8072);
     /*background-image: linear-gradient(to right, #1F1C2C , #928DAB);*/
-    /* background-image: linear-gradient(to left, #333333 , #dd1818); pure lust */
-    /* background-image: linear-gradient(to right, #23074d , #cc5333); taron tado */
-    /* background-image: linear-gradient(to right, #EB5757 , #000000); coal */
-    /* background-image: linear-gradient(to right, #1D4350 , #A43931); red ocean */
+    /* background-image: linear-gradient(to left, #333333 , #dd1818);*/
+    /* background-image: linear-gradient(to right, #23074d , #cc5333);*/
+    /* background-image: linear-gradient(to right, #EB5757 , #000000);*/
+    /* background-image: linear-gradient(to right, #1D4350 , #A43931);*/
     /*color: white;*/
     margin: 0;
 }
@@ -30,6 +30,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     font-family: arial;
+    font-weight: bold;
 }
 
 .navigation a:hover {
@@ -70,8 +71,29 @@ body {
     position: absolute;
     bottom: 380px;
 }
-
 /* NAVIGATION */
+
+/*SLIDESHOW*/
+
+.slidecontainer {
+    position: relative;
+}
+
+.textindicator {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+/*SLIDESHOW*/
 
 /* footer bottom */
 footer {
