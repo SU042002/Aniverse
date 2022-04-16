@@ -8,15 +8,18 @@ body {
     /* background-image: linear-gradient(to right, #23074d , #cc5333); taron tado */
     /* background-image: linear-gradient(to right, #EB5757 , #000000); coal */
     /* background-image: linear-gradient(to right, #1D4350 , #A43931); red ocean */
-    color: white;
+    /*color: white;*/
     margin: 0;
 }
 
 /* NAVIGATION: */
+
 .navigation {
     background-color: #131127;
     height: 50px;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .nav {
@@ -40,9 +43,11 @@ body {
 }
 
 .second_navigation {
+    position: relative;
     background-color: #7918FE;
     height: 50px;
     overflow: hidden;
+    z-index: 1;
 }
 
 #second_nav {
@@ -54,11 +59,16 @@ body {
 }
 #second_nav a {
     text-decoration:none;
-    padding:0 30px; /* variable width */
+    padding:0 20px; /* variable width */
     color: white;
     font-size: 16px;
     font-family: arial;
     font-weight: bold;
+}
+
+#curve {
+    position: absolute;
+    bottom: 380px;
 }
 
 /* NAVIGATION */
