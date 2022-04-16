@@ -74,25 +74,25 @@ body {
 /* NAVIGATION */
 
 /*SLIDESHOW*/
-
-.slidecontainer {
+.slideshow {
     position: relative;
 }
 
-.textindicator {
-    text-align: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 14px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #FFFFFF;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    outline-style: none;
 }
 
+.next {
+    right: 0;
+
+}
 /*SLIDESHOW*/
 
 /* footer bottom */

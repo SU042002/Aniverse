@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Aniverse</title>
     <link rel="stylesheet" href="../css/default.css">
-    <script src="../js/slideshow.js"></script>
+    <script src="../js/slideshow.js" defer></script>
+    <!--If defer is not used, the JavaScript function will run before everything
+    is loaded and this will in turn make the slideshow not work as intended.
+    It will not load the first Image properly. By using defer it loads all the HTML
+    and then executes the Javascript so everything works as intended-->
 </head>
 <body>
 
@@ -44,47 +48,26 @@
         </ul>
     </div>
 
-    <div class="slidecontainer"> <!-- creates target for CSS -->
-        <img name="slide" width="100%" height="100%" /> <!-- creates container for images, sets them to window size -->
-        <div id="changeText" class="textindicator"></div>
-
-        <script> /* script tags required for javascript to work*/
-        let i = 0; /* start point for image array */
-        const images = []; /* empty array for images */
-        const time = 4000; /* timer in millisecnds so 4000 is 4 seconds */
-
-        images[0] = "../img/promotions/promotion 1.jpg"; /* all the images in the array */
-        images[1] = "../img/promotions/promotion 2.jpg"; /* has to start at 0 (0 is the first image) */
-        images[2] = "../img/promotions/promotion 3.jpg";
-
-        function changeImg(){
-            document.slide.src = images[i]; /* this will grab the source images from
-    the array that will be cycled through */
-
-            if(i < images.length - 1){ /* if statement checks array length */
-                i++;   /* if i is less than 2 then increment i */
-            } else {  /* else reset the loop back to 0 */
-                i = 0;
-            }
-            setTimeout("changeImg()", time); /* sets the timer from variable time */
-        }
-        const text = ["1/3", "2/3", "3/3"]; /* array with the different strings that are used */
-        let counter = 0; /* start point for text */
-        const elem = document.getElementById("changeText"); /* variable that gets value from html element */
-        /* the images change after every 4 seconds
-       so I set the text to change after every 4 seconds */
-
-        function change() {
-            elem.innerHTML = text[counter]; /* gets first text based on counter */
-            counter++;  /* adds 1 to the counter value */
-            if (counter >= text.length) {  /* resets the text so it loops again */
-                counter = 0; /* value set to 0 so it loops */
-            }
-            setTimeout("change()", time);
-        }
-        window.addEventListener("load", changeImg); window.addEventListener("load", change);
-        </script> <!-- end of javascript -->
+<div class="slideshow">
+    <div class="slides">
+        <img src="../img/promotions/promotion 1.jpg" style="width:100%">
     </div>
+
+    <div class="slides">
+        <img src="../img/promotions/promotion 2.jpg" style="width:100%">
+    </div>
+
+    <div class="slides">
+        <img src="../img/promotions/promotion 3.jpg" style="width:100%">
+    </div>
+    <!-- Next and previous buttons -->
+    <div class="buttons">
+        <a class="prev" onclick="plusSlides(-1)">&#8617;</a>
+        <a class="next" onclick="plusSlides(1)">&#8618;</a>
+    </div>
+</div>
+
+</div>
 
 </body>
 </html>
