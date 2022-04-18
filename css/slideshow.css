@@ -1,0 +1,22 @@
+/*SLIDESHOW*/
+.slideshow {
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 36px;
+    color: white;
+    outline-style: solid;
+    background: #131127;
+}
+
+.next {
+    right: 0;
+}
+
+/*SLIDESHOW*/
