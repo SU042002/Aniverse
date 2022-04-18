@@ -1,0 +1,123 @@
+/*ORANGE*/
+
+.banner_salmon {
+    font-family: Arial;
+    padding: 60px;
+    text-align: center;
+    background: #FE8C68;
+    color: white;
+    font-size: 30px;
+}
+
+.banner_salmon h1 {
+    font-size: 74px;
+}
+
+.banner_salmon p {
+    font-size: 24px;
+}
+
+.wave_top_orange {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave_top_orange svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 52px;
+}
+
+.wave_top_orange .shape-fill {
+    fill: #FE8C68;
+}
+
+.wave_bottom_orange {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave_bottom_orange svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 86px;
+}
+
+.wave_bottom_orange .shape-fill {
+    fill: #FE8C68;
+}
+
+/*ORANGE*/
+
+/*ORANGE*/
+
+.banner_purple {
+    font-family: Arial;
+    padding: 60px;
+    text-align: center;
+    background: #FFDBFD;
+    color: #C37ABF;
+    font-size: 30px;
+}
+
+.banner_purple h1 {
+    font-size: 74px;
+}
+
+.banner_purple p {
+    font-size: 24px;
+}
+
+.wave_top_purple {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave_top_purple svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 52px;
+}
+
+.wave_top_purple .shape-fill {
+    fill: #FFDBFD;
+}
+
+.wave_bottom_purple {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave_bottom_purple svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 86px;
+}
+
+.wave_bottom_purple .shape-fill {
+    fill: #FFDBFD;
+}
+
+/*ORANGE*/

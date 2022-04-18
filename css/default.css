@@ -2,13 +2,11 @@
 /* CSS Document */
 
 body {
-    background-image: linear-gradient(to right, #F7CAC9 , #FA8072);
-    /*background-image: linear-gradient(to right, #1F1C2C , #928DAB);*/
-    /* background-image: linear-gradient(to left, #333333 , #dd1818);*/
-    /* background-image: linear-gradient(to right, #23074d , #cc5333);*/
-    /* background-image: linear-gradient(to right, #EB5757 , #000000);*/
-    /* background-image: linear-gradient(to right, #1D4350 , #A43931);*/
-    /*color: white;*/
+    background-image: linear-gradient(to right, #F7CAC9, #FA8072);
+    position: relative;
+    min-height: 100vh;
+    /*Position relative and min height sets the page container. This helps keep the footer (child element)
+    at 0 or the bottom based on absolute position.*/
     margin: 0;
 }
 
@@ -33,6 +31,13 @@ body {
     font-weight: bold;
 }
 
+.nav img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    float: left;
+}
+
 .navigation a:hover {
     color: #FF8C69;
 }
@@ -52,15 +57,17 @@ body {
 }
 
 #second_nav {
-    text-align:center;
+    text-align: center;
 }
+
 #second_nav li {
-    display:inline;
+    display: inline;
 
 }
+
 #second_nav a {
-    text-decoration:none;
-    padding:0 20px; /* variable width */
+    text-decoration: none;
+    padding: 0 20px; /* variable width */
     color: white;
     font-size: 16px;
     font-family: arial;
@@ -71,6 +78,7 @@ body {
     position: absolute;
     bottom: 380px;
 }
+
 /* NAVIGATION */
 
 /*SLIDESHOW*/
@@ -81,35 +89,65 @@ body {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 45%;
     padding: 10px;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 36px;
     color: white;
-    outline-style: none;
+    outline-style: solid;
+    background: #131127;
 }
 
 .next {
     right: 0;
-
 }
+
 /*SLIDESHOW*/
 
 /* footer bottom */
 footer {
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   padding-bottom: 6px;
-   text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*padding-left: 25% ;*/
+    background-image: linear-gradient(to right, #7918FE, #131127);
+    /*background: #7918FE;*/
+    height: auto;
 }
 
-.facebook {
-margin-right: 10px;
-margin-left: 10px;
+footer :is(a, ul, h1){
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: bold;
+    font-family: Arial, serif;
+    text-align: left;
 }
 
-.instagram {
-    margin-left: 5px;
+.footer_container {
+    text-align: center;
+}
+
+footer a:hover {
+    color: salmon;
+}
+
+.social_media {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.help {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.about_aniverse {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+
 }
 /* footer bottom */
