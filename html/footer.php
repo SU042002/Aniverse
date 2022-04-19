@@ -21,8 +21,8 @@
         <div class="social_media">
             <h1>Social Media</h1>
             <ul>
-                <li><a href="#" target="_blank">Twitter</a></li>
-                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/elonmusk" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/elonrmuskk/" target="_blank">Instagram</a></li>
                 <li><a href="#" target="_blank">Facebook</a></li>
             </ul>
         </div>

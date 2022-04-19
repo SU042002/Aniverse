@@ -26,7 +26,7 @@
             <li><a href="dvd.php">DVD</a></li>
             <li><a href="manga.php">Manga</a></li>
             <li><a href="figures.php">Figures</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><a href="games.php">Games</a></li>
+            <li><a href="accessories.php">Accessories</a></li>
         </ul>
     </div>

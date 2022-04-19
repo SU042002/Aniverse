@@ -12,7 +12,7 @@
 
 <div class="banner" id="manga">
     <h1>Manga</h1>
-    <p>MANGA</p>
+    <p>Welcome to your new and improved one stop resource for a massive range of manga!</p>
 </div>
 
 

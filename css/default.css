@@ -66,7 +66,6 @@ h1, p {
 
 #second_nav li {
     display: inline;
-
 }
 
 #second_nav a {
@@ -76,6 +75,10 @@ h1, p {
     font-size: 16px;
     font-family: arial;
     font-weight: bold;
+}
+
+#second_nav a:hover {
+    color: salmon;
 }
 
 #curve {
@@ -129,6 +132,5 @@ footer a:hover {
     display: inline-block;
     margin-left: 35px;
     margin-right: 35px;
-
 }
 /* footer bottom */

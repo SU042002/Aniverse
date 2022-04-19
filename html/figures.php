@@ -12,7 +12,7 @@
 
 <div class="banner" id="figures">
     <h1>Figures</h1>
-    <p>Welcome to your new and improved one stop resource for a massive range of Anime on DVD and Blu-Ray.</p>
+    <p><q>This is the best place to buy figures!</q> - said no one... ever...</p>
 </div>
 
 
