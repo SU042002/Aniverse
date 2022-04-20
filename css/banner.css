@@ -19,12 +19,13 @@
 
 #manga {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../img/banner/banner manga.jpg");
+    url("../img/banner/banner manga 2.jpg");
 }
 
 #dvd {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner dvd.jpg");
+    width: auto;
 }
 
 #figures {
@@ -34,7 +35,7 @@
 
 #games {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../img/banner/banner games.jpg");
+    url("../img/banner/banner games 2.jpg");
 }
 
 #accessories {

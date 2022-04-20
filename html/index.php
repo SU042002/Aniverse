@@ -14,24 +14,24 @@
 </head>
 <body>
 
-<?php require "header.php";?>
+<?php require "header.php"; ?>
 
 <div class="slideshow">
     <div class="slides">
         <a href="figures.php" target="_blank">
-        <img src="../img/promotions/promotion 1.jpg" style="width:100%">
+            <img src="../img/promotions/promotion 1.jpg" style="width:100%">
         </a>
     </div>
 
-    <div class="slides" >
+    <div class="slides">
         <a href="dvd.php" target="_blank">
-        <img src="../img/promotions/promotion 2.jpg" style="width:100%">
+            <img src="../img/promotions/promotion 2.jpg" style="width:100%">
         </a>
     </div>
 
     <div class="slides">
         <a href="accessories.php" target="_blank">
-        <img src="../img/promotions/promotion 3.jpg" style="width:100%">
+            <img src="../img/promotions/promotion 3.jpg" style="width:100%">
     </div>
     <!-- Next and previous buttons -->
     <div class="buttons">
@@ -40,7 +40,7 @@
     </div>
 </div>
 
-<?php require "footer.php";?>
+    <?php require "footer.php"; ?>
 
 </body>
 </html>

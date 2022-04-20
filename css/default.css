@@ -91,12 +91,12 @@ h1, p {
 /* footer bottom */
 footer {
     position: absolute;
-    bottom: 0;
+    overflow: hidden;
     width: 100%;
+    bottom: 0;
     /*padding-left: 25% ;*/
     background-color: #131127;
     /*background: #7918FE;*/
-    height: auto;
 }
 
 footer :is(a, ul, h1){
@@ -133,4 +133,5 @@ footer a:hover {
     margin-left: 35px;
     margin-right: 35px;
 }
+
 /* footer bottom */

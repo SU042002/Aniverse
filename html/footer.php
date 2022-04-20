@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="https://twitter.com/elonmusk" target="_blank">Twitter</a></li>
                 <li><a href="https://www.instagram.com/elonrmuskk/" target="_blank">Instagram</a></li>
-                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="https://www.facebook.com/animenewsnetwork" target="_blank">Facebook</a></li>
             </ul>
         </div>
 
