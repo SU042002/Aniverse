@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: relative;
+    min-height: 100%;
+}
+
+#main {
+    padding-bottom: 7.2rem;
+}
+
+/* footer bottom */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7.2rem;
+    background-color: #131127;
+    padding-top: 22px;
+    /*background: #7918FE;*/
+}
+
+footer :is(a, ul, h1){
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: bold;
+    font-family: Arial, serif;
+    text-align: left;
+}
+
+.footer_container {
+    text-align: center;
+}
+
+footer a:hover {
+    color: salmon;
+}
+
+.social_media {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.help {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.about_aniverse {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+/* footer bottom */

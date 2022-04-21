@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <div class="footer_container">
         <div class="help">
             <h1>Help and Customer Service</h1>

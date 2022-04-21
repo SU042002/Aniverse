@@ -1,14 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background-image: linear-gradient(to right, #F7CAC9, #FA8072);
-    position: relative;
-    min-height: 100vh;
     /*Position relative and min height sets the page container. This helps keep the footer (child element)
     at 0 or the bottom based on absolute position.*/
-    margin: 0;
 }
+
 
 h1, p {
     cursor: default;
@@ -61,6 +63,7 @@ h1, p {
 }
 
 #second_nav {
+    padding-top: 15px;
     text-align: center;
 }
 
@@ -88,51 +91,18 @@ h1, p {
 
 /* NAVIGATION */
 
-/* footer bottom */
-footer {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    bottom: 0;
-    /*padding-left: 25% ;*/
-    background-color: #131127;
-    /*background: #7918FE;*/
-}
+/* products */
 
-footer :is(a, ul, h1){
+.products_display {
+    position: relative;
+    max-width: 250px;
+    margin: auto;
+    font-family: arial;
+    color: black;
+    float: left;
+    /* background-color: white; */
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: white;
-    text-decoration: none;
-    list-style-type: none;
-    font-weight: bold;
-    font-family: Arial, serif;
-    text-align: left;
-}
-
-.footer_container {
     text-align: center;
 }
-
-footer a:hover {
-    color: salmon;
-}
-
-.social_media {
-    display: inline-block;
-    margin-left: 35px;
-    margin-right: 35px;
-}
-
-.help {
-    display: inline-block;
-    margin-left: 35px;
-    margin-right: 35px;
-}
-
-.about_aniverse {
-    display: inline-block;
-    margin-left: 35px;
-    margin-right: 35px;
-}
-/* footer bottom */
-
-/* products */
