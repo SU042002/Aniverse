@@ -13,6 +13,7 @@
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
 }
 
 .add-button:hover{
@@ -37,14 +38,9 @@ label{
     border-radius: 10px;
     text-align: center;
     padding-top: 18px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px auto 20px;
 }
 
-.prodImage{
-    /* This is the upload button */
-    padding-bottom: 1px;
-}
 
 label:hover{
     /* this makes the upload image button animated */
@@ -60,6 +56,10 @@ h1{
     font-family: Arial;
     text-align: center;
     color: black;
+}
+
+p {
+font-family: Arial;
 }
 
 .addForm{
