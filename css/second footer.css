@@ -34,6 +34,7 @@ footer :is(a, ul, h1){
 
 .footer_container {
     text-align: center;
+    background-color: #131127;
 }
 
 footer a:hover {

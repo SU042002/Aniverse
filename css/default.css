@@ -7,6 +7,7 @@
 
 body {
     background-image: linear-gradient(to right, #F7CAC9, #FA8072);
+    background-color: white;
     /*Position relative and min height sets the page container. This helps keep the footer (child element)
     at 0 or the bottom based on absolute position.*/
 }
@@ -93,7 +94,7 @@ h1, p {
 
 /* products */
 
-.products_display {
+.content {
     position: relative;
     max-width: 250px;
     margin: auto;

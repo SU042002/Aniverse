@@ -60,7 +60,11 @@ h1{
 
 p {
 font-family: Arial;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+
 
 .addForm{
   /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
@@ -73,4 +77,6 @@ font-family: Arial;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+    padding-top: 50px;
 }
+
