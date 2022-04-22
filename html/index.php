@@ -12,7 +12,6 @@ and then executes the Javascript so everything works as intended-->
     <link rel="stylesheet" href="../css/slideshow.css">
     <link rel="stylesheet" href="../css/main%20footer.css">
     <link rel="stylesheet" href="../css/products%20display.css">
-
     <?php require_once "../php/database_connection.php"; ?>
 </head>
 <body>
@@ -59,7 +58,7 @@ and then executes the Javascript so everything works as intended-->
                 ?>
                 <div class="content" id="<?php echo $row["product_name"]; ?>">
                     <!-- html and php used together so that products from the data base are displayed -->
-                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>" width="150px" height="150px" class="product-img"/>
+                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>" height="150px" class="product-img"/>
                     <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
                     <h2 class="product-h2">£<?php echo $row["product_price"]; ?></h2>
                     <!-- product price is grabbed from the column -->
