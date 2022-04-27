@@ -5,7 +5,7 @@
                 <img src="../img/icons/cart%20(2).png" class="home">
             </a>
 
-            <a class="nav" href="#">Help
+            <a class="nav" href="help.php">Help
                 <img src="../img/icons/help.png" class="home">
             </a>
 

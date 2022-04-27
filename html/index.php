@@ -58,13 +58,14 @@ and then executes the Javascript so everything works as intended-->
                 ?>
                 <div class="content" id="<?php echo $row["product_name"]; ?>">
                     <!-- html and php used together so that products from the data base are displayed -->
-                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>" height="150px" class="product-img"/>
+                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>" height="150px" class="product_img"/>
                     <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
-                    <h2 class="product-h2">£<?php echo $row["product_price"]; ?></h2>
+                    <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
                     <!-- product price is grabbed from the column -->
-                    <p class="product-p"><?php echo $row["product_name"]; ?></p>
+                    <p class="product_p"><?php echo $row["product_name"]; ?></p>
                     <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-
+                    <button type="submit" class="add-button" name="submission">Add Product</button>
+                     <!-- add to basket button -->
                 </div>
                 <?php
             }
@@ -72,7 +73,6 @@ and then executes the Javascript so everything works as intended-->
         </div>
     </div>
 </div>
-
         <!--PRODUCTS-->
 
 <?php require "footer.php"; ?>

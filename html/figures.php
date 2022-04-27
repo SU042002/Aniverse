@@ -39,7 +39,8 @@
                     <!-- product price is grabbed from the column -->
                     <p class="product-p"><?php echo $row["product_name"]; ?></p>
                     <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-
+                    <button type="submit" class="add-button" name="submission">Add Product</button>
+                    <!-- add to basket button -->
                 </div>
                 <?php
             }

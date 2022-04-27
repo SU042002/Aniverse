@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="footer_container">
         <div class="help">
-            <h1>Help and Customer Service</h1>
+            <h1 id="help">Help and Customer Service</h1>
             <ul>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Shipping and Returns Information</a></li>
@@ -10,7 +10,7 @@
         </div>
 
         <div class="about_aniverse">
-            <h1>About Aniverse</h1>
+            <h1 id="about_aniverse">About Aniverse</h1>
             <ul>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">About Us</a></li>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="social_media">
-            <h1>Social Media</h1>
+            <h1 id="social_media">Social Media</h1>
             <ul>
                 <li><a href="https://twitter.com/elonmusk" target="_blank">Twitter</a></li>
                 <li><a href="https://www.instagram.com/elonrmuskk/" target="_blank">Instagram</a></li>
