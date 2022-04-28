@@ -2,7 +2,7 @@
     <div class="navigation_container">
         <div class="navigation">
             <a class="nav" href="admin.php">Admin
-                <img src="../img/icons/cart%20(2).png" class="home">
+                <img src="../img/icons/basic_gear.png" class="home">
             </a>
 
             <a class="nav" href="#">Basket

@@ -3,9 +3,9 @@
         <div class="help">
             <h1 id="help">Help and Customer Service</h1>
             <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Shipping and Returns Information</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="help.php">FAQ</a></li>
+                <li><a href="help.php">Shipping and Returns Information</a></li>
+                <li><a href="help.php">Contact Us</a></li>
             </ul>
         </div>
 
