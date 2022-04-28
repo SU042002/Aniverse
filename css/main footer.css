@@ -81,3 +81,18 @@ footer a:hover {
     font-size: 40px;
     color: #FFDBFD  ;
 }
+
+a[href*="https://twitter.com/elonmusk"] {
+    background:url("../img/icons/twitter.ico") no-repeat left center;
+    padding-left:19px;
+}
+
+a[href*="https://www.facebook.com/animenewsnetwork"] {
+    background:url("../img/icons/facebook.png") no-repeat left center;
+    padding-left:19px;
+}
+
+a[href*="https://www.instagram.com/elonrmuskk/"] {
+    background:url("../img/icons/instagram.png") no-repeat left center;
+    padding-left:19px;
+}

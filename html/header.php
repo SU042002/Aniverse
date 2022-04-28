@@ -1,6 +1,10 @@
 <header>
     <div class="navigation_container">
         <div class="navigation">
+            <a class="nav" href="admin.php">Admin
+                <img src="../img/icons/cart%20(2).png" class="home">
+            </a>
+
             <a class="nav" href="#">Basket
                 <img src="../img/icons/cart%20(2).png" class="home">
             </a>
@@ -9,7 +13,7 @@
                 <img src="../img/icons/help.png" class="home">
             </a>
 
-            <a class="nav" href="#">Login
+            <a class="nav" href="login.php">Login
                 <img src="../img/icons/login.png" class="home">
             </a>
 

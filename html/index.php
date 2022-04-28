@@ -82,7 +82,6 @@ and then executes the Javascript so everything works as intended-->
             <?php
             }
         ?>
-
         <!--SEARCH BAR-->
 
         <!--PRODUCTS-->
