@@ -12,6 +12,7 @@ and then executes the Javascript so everything works as intended-->
     <link rel="stylesheet" href="../css/slideshow.css">
     <link rel="stylesheet" href="../css/main%20footer.css">
     <link rel="stylesheet" href="../css/products%20display.css">
+    <link rel="stylesheet" href="../css/search%20bar.css">
     <?php require_once "../php/database_connection.php"; ?>
 </head>
 <body>
@@ -47,14 +48,14 @@ and then executes the Javascript so everything works as intended-->
         <!--SLIDESHOW-->
 
         <!--SEARCH BAR-->
-        <form action="" method="post">
-            <input type="text" name="search" placeholder="Search for Item">
-            <input type="submit" value="Search">
+        <form id="search" action="" method="get">
+            <input id="search_bar" type="text" name="search" placeholder="Search for Item">
+            <input id="search_submit" type="submit" value="Search">
         </form>
 
         <?php
-        if(isset($_POST['search'])) {
-            $searchQuery = $_POST['search'];
+        if(isset($_GET['search'])) {
+            $searchQuery = $_GET['search'];
 
             // setting connection to the database
             $sql = "SELECT * FROM products WHERE product_name LIKE'%$searchQuery%' or id LIKE '$searchQuery' or product_category LIKE '$searchQuery';";
@@ -63,24 +64,25 @@ and then executes the Javascript so everything works as intended-->
             while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
             {
                 ?>
-                <div class="content" id="<?php echo $row["product_name"]; ?>">
-                    <!-- html and php used together so that products from the data base are displayed -->
-                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
-                         height="150px" class="product_img"/>
-                    <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
-                    <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
-                    <!-- product price is grabbed from the column -->
-                    <p class="product_p"><?php echo $row["product_name"]; ?></p>
-                    <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-                    <button type="submit" class="add-button" name="submission">Add Product</button>
-                    <!-- add to basket button -->
-                </div>
+                        <div class="content" id="<?php echo $row["product_name"]; ?>">
+                            <!-- html and php used together so that products from the data base are displayed -->
+                            <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
+                                 height="150px" class="product_img"/>
+                            <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
+                            <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
+                            <!-- product price is grabbed from the column -->
+                            <p class="product_p"><?php echo $row["product_name"]; ?></p>
+                            <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
+                            <button type="submit" class="add-button" name="submission">Add Product</button>
+                            <!-- add to basket button -->
+                        </div>
                 <?php
             }
             ?>
             <?php
             }
         ?>
+
         <!--SEARCH BAR-->
 
         <!--PRODUCTS-->

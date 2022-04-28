@@ -1,0 +1,33 @@
+#search {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#search_bar {
+    height: 30px;
+    width: 200px;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: #FE8C68;
+    padding-left: 12px;
+    outline: none;
+}
+
+#search_submit {
+    font-weight: bold;
+    width: 60px;
+    height: 25px;
+    border: none;
+    background: linear-gradient(to right, #FE8C68, #FFDBFD);
+    background-size: 200%;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+
+
+
