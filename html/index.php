@@ -18,7 +18,7 @@ and then executes the Javascript so everything works as intended-->
 
 <?php require "header.php"; ?>
 
-        <!--SLIDESHOW-->
+<!--SLIDESHOW-->
 <div id="container">
     <div id="main">
         <div class="slideshow">
@@ -46,6 +46,43 @@ and then executes the Javascript so everything works as intended-->
         </div>
         <!--SLIDESHOW-->
 
+        <!--SEARCH BAR-->
+        <form action="" method="post">
+            <input type="text" name="search" placeholder="Search for Item">
+            <input type="submit" value="Search">
+        </form>
+
+        <?php
+        if(isset($_POST['search'])) {
+            $searchQuery = $_POST['search'];
+
+            // setting connection to the database
+            $sql = "SELECT * FROM products WHERE product_name LIKE'%$searchQuery%' or id LIKE '$searchQuery' or product_category LIKE '$searchQuery';";
+            $res = mysqli_query($connectAniverse, $sql);
+            // fetches all rows
+            while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
+            {
+                ?>
+                <div class="content" id="<?php echo $row["product_name"]; ?>">
+                    <!-- html and php used together so that products from the data base are displayed -->
+                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
+                         height="150px" class="product_img"/>
+                    <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
+                    <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
+                    <!-- product price is grabbed from the column -->
+                    <p class="product_p"><?php echo $row["product_name"]; ?></p>
+                    <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
+                    <button type="submit" class="add-button" name="submission">Add Product</button>
+                    <!-- add to basket button -->
+                </div>
+                <?php
+            }
+            ?>
+            <?php
+            }
+        ?>
+        <!--SEARCH BAR-->
+
         <!--PRODUCTS-->
         <div class="products_gallery">
             <?php
@@ -58,14 +95,15 @@ and then executes the Javascript so everything works as intended-->
                 ?>
                 <div class="content" id="<?php echo $row["product_name"]; ?>">
                     <!-- html and php used together so that products from the data base are displayed -->
-                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>" height="150px" class="product_img"/>
+                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
+                         height="150px" class="product_img"/>
                     <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
                     <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
                     <!-- product price is grabbed from the column -->
                     <p class="product_p"><?php echo $row["product_name"]; ?></p>
                     <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
                     <button type="submit" class="add-button" name="submission">Add Product</button>
-                     <!-- add to basket button -->
+                    <!-- add to basket button -->
                 </div>
                 <?php
             }
@@ -73,7 +111,7 @@ and then executes the Javascript so everything works as intended-->
         </div>
     </div>
 </div>
-        <!--PRODUCTS-->
+<!--PRODUCTS-->
 
 <?php require "footer.php"; ?>
 
