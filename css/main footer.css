@@ -65,3 +65,19 @@ footer a:hover {
     margin-right: 35px;
 }
 /* footer bottom */
+
+/*Use of different font sizes and colours*/
+#social_media {
+    font-size: 40px;
+    color: #FE8C68;
+}
+
+#about_aniverse {
+    font-size: 40px;
+    color: #7918FE;
+}
+
+#help {
+    font-size: 40px;
+    color: #FFDBFD  ;
+}

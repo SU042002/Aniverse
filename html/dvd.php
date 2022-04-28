@@ -17,7 +17,7 @@
 <div id="container">
     <div id="main">
         <div class="banner" id="dvd">
-            <h1>DVD</h1>
+            <h1 id="font_dvd">DVD</h1>
             <p>Welcome to your new and improved one stop resource for a massive range of Anime on DVD and Blu-Ray.</p>
         </div>
 

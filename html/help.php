@@ -57,7 +57,7 @@ and then executes the Javascript so everything works as intended-->
 </table>
 
 <h2>FREQUENTLY ASKED QUESTIONS</h2>
-<button type="button" class="section">Where is my order?</button>
+<button type="button" class="section">Where is my order? (USE OF ORDERED LIST AND UNORDERED LIST)</button>
 <div class="information">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed lacus blandit, interdum orci ac, commodo arcu.
         Donec ac nulla nec velit vestibulum auctor ullamcorper in neque. Nulla vel enim nulla. Vivamus convallis nibh in
