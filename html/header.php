@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <header>
@@ -7,17 +7,19 @@
         <div class="navigation">
 
             <?php
-            if (isset($_SESSION["userType"]) == "Admin") {
-                echo '<a class="nav" href="admin.php">Admin
-                      <img src="../img/icons/basic_gear.png" class="home">
-                      </a>';
-                echo '<a class="nav" href="../php/logout.php">Logout</a>';
-            } elseif (isset($_SESSION["userType"]) == "User") {
-                echo '<a class="nav" href="../php/logout.php">Logout</a>';
+            if (isset($_SESSION["userType"])) {
+                if ($_SESSION["userType"] == "Admin") {
+                    echo '<a class="nav" href="admin.php">Admin
+                          <img src="../img/icons/basic_gear.png" class="home">
+                          </a>';
+                    echo '<a class="nav" href="../php/logout.php">Logout</a>';
+                } else if ($_SESSION["userType"] == "User") {
+                    echo '<a class="nav" href="../php/logout.php">Logout</a>';
+                }
             } else {
                 echo '<a class="nav" href="login.php">Login
-                      <img src="../img/icons/login.png" class="home">
-                      </a>';
+                          <img src="../img/icons/login.png" class="home">
+                          </a>';
             }
             ?>
 
