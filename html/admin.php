@@ -5,6 +5,7 @@
     <title>Aniverse</title>
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <?php require_once "../php/database_connection.php"; ?>
 </head>
 <body>
 
@@ -84,6 +85,37 @@ if (isset($_SESSION["userType"])) {
 
             </form>
         </div>
+
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                    <?php
+                    // setting connection to the database
+                    $sql = "SELECT * FROM products;";
+                    $res = mysqli_query($connectAniverse, $sql);
+                    // fetches all rows
+                    while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
+                    {
+                    ?>
+                        <tr>
+                            <td><?php echo $row["product_name"]?></td>
+                            <td><?php echo $row["product_price"]?></td>
+                            <td><?php echo $row["product_category"]?></td>
+                            <td></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+            </table>
+        </div>
+
     </div>
 
 

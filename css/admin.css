@@ -141,3 +141,22 @@ textarea {
     border-color: #7918FE;
 }
 
+table {
+    color: white;
+    background-color:#131127 ;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #7918FE;
+    padding-top: 30px;
+    font-family: arial;
+    width: 50%;
+    border-spacing: 30px;
+
+
+}
+
+
+
+
+
