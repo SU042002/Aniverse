@@ -67,3 +67,9 @@ h2{
     font-family: Arial;
     color: black;
 }
+
+.messages {
+    font-family: Arial;
+    text-align: center;
+    padding-top: 12px;
+}

@@ -83,3 +83,40 @@ function createUser($connectAniverse, $userName, $email, $password, $userType) {
     header("location: ../html/signup.php?error=none");
     exit();
 }
+
+function emptyInputsLogin($userName, $password) {
+    $result;
+    if (empty($userName) || empty($password)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser($connectAniverse, $userName, $password) {
+    $userExists = userNameExists($connectAniverse, $userName, $userName);
+
+    if ($userExists === false) {
+        header("location: ../html/login.php?error=invalidLogin");
+        exit();
+    }
+
+    $passwordHash = $userExists["userPassword"];
+    $passwordCheck = password_verify($password, $passwordHash);
+
+    if ($passwordCheck === false) {
+        header("location: ../html/login.php?error=wrongPassword");
+        exit();
+    } elseif ($passwordCheck === true) {
+        session_start();
+        $_SESSION["userName"] = $userExists["userName"];
+        $_SESSION["userType"] = $userExists["userType"];
+
+        header("location: ../html/index.php");
+        exit();
+    }
+
+
+}

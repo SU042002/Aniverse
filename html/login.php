@@ -11,19 +11,30 @@
 
 <?php require "header.php"; ?>
 
-<form class="login_form" action="" method="post">
+<form class="login_form" action="../php/login_script.php" method="post">
     <h1>Login</h1>
+    <?php
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "fillAllFields") {
+            echo "<p class='messages'>You forgot to fill in all the fields!</p>";
+        } elseif ($_GET["error"] == "invalidLogin") {
+            echo "<p class='messages'>That user does not exist.</p>";
+        } elseif ($_GET["error"] == "wrongPassword") {
+            echo "<p class='messages'>You entered the wrong password.</p>";
+        }
+    }
+    ?>
 
     <div class="login_fields">
-        <input type="text" name="uid" placeholder="Username" required autocomplete="off">
+        <input type="text" name="user_name" placeholder="Username or Email" required autocomplete="off">
     </div>
 
     <div class="login_fields">
-        <input type="password" name="pass" placeholder="Password" required autocomplete="off"> <!-- input type hides
+        <input type="password" name="password" placeholder="Password" required autocomplete="off"> <!-- input type hides
         password -->
     </div>
 
-    <button type="submit" class="login_button">Login</button> <!-- button to submit info -->
+    <button type="submit" name="submit" class="login_button">Login</button> <!-- button to submit info -->
     <div class="bottom_text">
         <p>Don't have an account? <a href="signup.php">Sign Up</p>
     </div>
