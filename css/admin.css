@@ -66,7 +66,7 @@ p {
 
 .addForm {
     /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
-    display: inline-block;
+    display: inline;
     width: 360px;
     height: 520px;
     background-color: white;
@@ -80,7 +80,7 @@ p {
 
 .deleteForm {
     /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
-    display: inline-block;
+    display: inline;
     width: 360px;
     height: 520px;
     background-color: white;
@@ -93,7 +93,7 @@ p {
 }
 
 .product_container {
-    display: inline-block;
+    display: inline-flex;
     flex-wrap: wrap;
     /*width: 100%;*/
     padding-top: 80px;
