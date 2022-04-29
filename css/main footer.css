@@ -96,3 +96,8 @@ a[href*="https://www.instagram.com/elonrmuskk/"] {
     background:url("../img/icons/instagram.png") no-repeat left center;
     padding-left:19px;
 }
+
+a[href*="https://icons8.com/license"] {
+    background:url("../img/icons/icons8.png") no-repeat left center;
+    padding-left:19px;
+}
