@@ -39,6 +39,16 @@ and then executes the Javascript so everything works as intended-->
                 <a href="accessories.php" target="_blank">
                     <img src="../img/promotions/promotion 3.jpg" style="width:100%">
             </div>
+
+            <div class="slides">
+                <a href="games.php" target="_blank">
+                    <img src="../img/promotions/promotion 4.jpg" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <a href="manga.php" target="_blank">
+                    <img src="../img/promotions/promotion 5.jpg" style="width:100%">
+            </div>
             <!-- Next and previous buttons -->
             <div class="buttons">
                 <a class="prev" onclick="plusSlides(-1)">&#8617;</a>
