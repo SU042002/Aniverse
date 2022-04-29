@@ -53,6 +53,7 @@ and then executes the Javascript so everything works as intended-->
             <input id="search_submit" type="submit" value="Search">
         </form>
 
+        <div class="search_gallery">
         <?php
         if(isset($_GET['search'])) {
             $searchQuery = $_GET['search'];
@@ -82,6 +83,7 @@ and then executes the Javascript so everything works as intended-->
             <?php
             }
         ?>
+        </div>
         <!--SEARCH BAR-->
 
         <!--PRODUCTS-->

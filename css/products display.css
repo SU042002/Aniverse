@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+.search_gallery {
+    padding-left: 43px;
+}
+
 .content {
     margin-left: 20px;
     margin-top: 20px;
