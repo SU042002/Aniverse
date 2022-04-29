@@ -141,7 +141,12 @@ textarea {
     border-color: #7918FE;
 }
 
+th {
+    text-align: left;
+}
+
 table {
+    border-radius: 14px;
     color: white;
     background-color:#131127 ;
     margin-top: 30px;
@@ -152,10 +157,23 @@ table {
     font-family: arial;
     width: 50%;
     border-spacing: 30px;
-
-
 }
 
+.edit_button {
+    color: white;
+    background-color: salmon;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.delete_button {
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+}
 
 
 

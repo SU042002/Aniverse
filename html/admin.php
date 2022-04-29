@@ -5,7 +5,9 @@
     <title>Aniverse</title>
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/main%20footer.css">
     <?php require_once "../php/database_connection.php"; ?>
+    <?php require_once "../php/product_delete.php"; ?>
 </head>
 <body>
 
@@ -93,7 +95,6 @@ if (isset($_SESSION["userType"])) {
                     <th>Product</th>
                     <th>Price</th>
                     <th>Category</th>
-                    <th>Action</th>
                 </tr>
                 </thead>
                     <?php
@@ -108,7 +109,12 @@ if (isset($_SESSION["userType"])) {
                             <td><?php echo $row["product_name"]?></td>
                             <td><?php echo $row["product_price"]?></td>
                             <td><?php echo $row["product_category"]?></td>
-                            <td></td>
+                            <td>
+                                <a class="edit_button" href="admin.php?edit=<?php echo $row["id"]; ?>">Edit</a>
+                            </td>
+                            <td>
+                                <a class="delete_button" href="admin.php?delete=<?php echo $row["id"]; ?>">Delete</a>
+                            </td>
                         </tr>
                         <?php
                     }
@@ -118,6 +124,7 @@ if (isset($_SESSION["userType"])) {
 
     </div>
 
+    <?php require "footer.php"; ?>
 
 </body>
 </html>

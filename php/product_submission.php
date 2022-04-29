@@ -21,7 +21,7 @@ if(isset($_POST["submission"]))
     mysqli_query($connectAniverse, $sql);
     // this is all the columns that the data is inserted into in order
 
-    header("Location: products.php?productAdded");
+    header("Location: ../html/admin.php?error=none");
     /* header is changed so that there is not a double post problem and resubmission problem if
     the user refreshes the page for whatever reason */
 }
