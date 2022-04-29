@@ -5,14 +5,15 @@
 <header>
     <div class="navigation_container">
         <div class="navigation">
+
             <?php
             if (isset($_SESSION["userType"]) == "Admin") {
                 echo '<a class="nav" href="admin.php">Admin
                       <img src="../img/icons/basic_gear.png" class="home">
                       </a>';
-                echo '<a class="nav" href="logout.php">Logout</a>';
+                echo '<a class="nav" href="../php/logout.php">Logout</a>';
             } elseif (isset($_SESSION["userType"]) == "User") {
-                echo '<a class="nav" href="logout.php">Logout</a>';
+                echo '<a class="nav" href="../php/logout.php">Logout</a>';
             } else {
                 echo '<a class="nav" href="login.php">Login
                       <img src="../img/icons/login.png" class="home">
