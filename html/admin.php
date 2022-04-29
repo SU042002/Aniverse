@@ -10,6 +10,11 @@
 
 <?php require "header.php"; ?>
 
+<?php
+    if ($_SESSION["userType"] == "User")
+        header("location: index.php?error=notAdmin");
+?>
+
 <div id="container">
     <div id="main">
         <div class="product_container" id="all_products">

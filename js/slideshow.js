@@ -1,4 +1,4 @@
-let slideIndex = 1;
+let slideIndex = Math.floor(Math.random() * 3) + 1;;
 showSlides(slideIndex);
 
 // Next/previous controls
