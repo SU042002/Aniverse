@@ -1,7 +1,9 @@
 .products_gallery {
     display: inline-block;
     flex-wrap: wrap;
-    width: 100%;
+    /*width: 100%;*/
+    padding-left: 43px;
+    overflow: hidden;
 }
 
 .content {
@@ -16,7 +18,7 @@
 .add-button {
     /* the add button is the submit button */
     display: block;
-    width: 180px;
+    width: 145px;
     height: 45px;
     border: none;
     background: linear-gradient(to right, #FE8C68, #FFDBFD);
