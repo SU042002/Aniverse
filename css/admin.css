@@ -4,7 +4,7 @@
     width: 180px;
     height: 45px;
     border: none;
-    background: linear-gradient(to right, #1F1C2C , #928DAB);
+    background: linear-gradient(to right, #1F1C2C, #928DAB);
     background-size: 200%;
     color: white;
     outline: none;
@@ -13,22 +13,22 @@
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
+    margin-top: -15px;
 }
 
-.add-button:hover{
+.add-button:hover {
     background-position: right;
     /* when the user hovers above it this property makes it look animated */
 }
 
-label{
-/*   the label is the upload image "button", I changed the upload button to a 
-  label so it could be customized like this using css and make it look more 
-  appealing  */
+label {
+    /*   the label is the upload image "button", I changed the upload button to a
+      label so it could be customized like this using css and make it look more
+      appealing  */
     display: block;
     width: 180px;
     border: none;
-    background: linear-gradient(to right, #1F1C2C , #928DAB);
+    background: linear-gradient(to right, #1F1C2C, #928DAB);
     background-size: 200%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -42,16 +42,16 @@ label{
 }
 
 
-label:hover{
+label:hover {
     /* this makes the upload image button animated */
     background-position: right;
 }
 
-.prodInput{
+.prodInput {
     padding-bottom: 10px;
 }
 
-h1{
+h1 {
     /* this styles the header */
     font-family: Arial;
     text-align: center;
@@ -59,24 +59,57 @@ h1{
 }
 
 p {
-font-family: Arial;
+    font-family: Arial;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-
-
-.addForm{
-  /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
-  width: 360px;
-  height: 480px;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.addForm {
+    /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
+    width: 360px;
+    height: 480px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     padding-top: 50px;
+    border-style: solid;
+    border-color: #7918FE;
+}
+
+select {
+    text-align: center;
+    display: block;
+    font-family: Arial;
+    width: 50%;
+    height: 30px;
+    margin: -18px auto 30px;
+    appearance: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.input_box {
+    width: 200px;
+    height: 12px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #7918FE;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 200px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #7918FE;
 }
 

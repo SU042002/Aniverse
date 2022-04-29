@@ -19,12 +19,12 @@
                 <!-- enctype is needed because there are files that are uploaded, images -->
                 <p>All the fields are required to submit!</p>
                 <div class="prodInput">
-                    <input type="text" name="productName" placeholder="Product Name" required autocomplete="off">
+                    <input class="input_box" type="text" name="productName" placeholder="Product Name" required autocomplete="off">
                 </div> <!-- creating seperate divisions for all the inputs -->
                 <!-- auto complete is switched off for everything so history isn't saved -->
                 <!-- required tag here so that nothing is left empty before data is sent off -->
                 <div class="prodInput">
-                    <input type="text" name="productPrice" placeholder="Price" required autocomplete="off">
+                    <input class="input_box" type="text" name="productPrice" placeholder="Price" required autocomplete="off">
                 </div> <!-- input for price -->
                 <div class="prodInput">
                     <textarea name="productDesc" rows="4" cols="0" autocomplete="off" placeholder="Description"
