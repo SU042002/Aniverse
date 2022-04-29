@@ -1,7 +1,7 @@
 .login_form{
     margin-top: 50px;
     width: 320px;
-    height: 540px;
+    height: 640px;
     background-color: white;
     padding: 60px 20px;
     border-radius: 12px;
@@ -67,4 +67,21 @@ h2{
     padding-top: 20px;
     font-family: Arial;
     color: black;
+}
+
+.messages {
+    font-family: Arial;
+    text-align: center;
+    padding-top: 12px;
+}
+
+select {
+    text-align: center;
+    display: block;
+    font-family: Arial;
+    width: 50%;
+    height: 30px;
+    margin: -18px auto 30px;
+    appearance: none;
+    border-radius: 5px;
 }
