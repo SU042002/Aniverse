@@ -66,14 +66,12 @@ p {
 
 .addForm {
     /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
+    display: inline-block;
     width: 360px;
     height: 520px;
     background-color: white;
     border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
     padding-top: 50px;
     border-style: solid;
@@ -82,19 +80,33 @@ p {
 
 .deleteForm {
     /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
+    display: inline-block;
     width: 360px;
     height: 520px;
     background-color: white;
     border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 1060px;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
     padding-top: 50px;
     border-style: solid;
     border-color: #7918FE;
 }
+
+.product_container {
+    display: inline-block;
+    flex-wrap: wrap;
+    /*width: 100%;*/
+    padding-top: 80px;
+    padding-left: 28%;
+}
+
+/*.content {*/
+/*    display: inline-block;*/
+/*    flex-wrap: wrap;*/
+/*    !*width: 100%;*!*/
+/*    padding-left: 43px;*/
+/*    overflow: hidden;*/
+/*}*/
 
 select {
     text-align: center;
