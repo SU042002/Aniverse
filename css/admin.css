@@ -80,6 +80,22 @@ p {
     border-color: #7918FE;
 }
 
+.deleteForm {
+    /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
+    width: 360px;
+    height: 520px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 1060px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+    border-style: solid;
+    border-color: #7918FE;
+}
+
 select {
     text-align: center;
     display: block;
