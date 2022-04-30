@@ -4,7 +4,7 @@
     width: 180px;
     height: 45px;
     border: none;
-    background: linear-gradient(to right, #1F1C2C, #928DAB);
+    background: linear-gradient(to right, #FE8C68, #FFDBFD);
     background-size: 200%;
     color: white;
     outline: none;
@@ -28,7 +28,7 @@ label {
     display: block;
     width: 180px;
     border: none;
-    background: linear-gradient(to right, #1F1C2C, #928DAB);
+    background: linear-gradient(to right, #FE8C68, #FFDBFD);
     background-size: 200%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -67,7 +67,7 @@ p {
 }
 
 #select_options {
-    display: block;
+    width: 200px;
     margin: 0 auto;
 }
 
