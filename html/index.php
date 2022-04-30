@@ -25,29 +25,29 @@ and then executes the Javascript so everything works as intended-->
         <div class="slideshow">
             <div class="slides">
                 <a href="figures.php" target="_blank">
-                    <img src="../img/promotions/promotion 1.jpg" style="width:100%">
+                    <img src="../img/promotions/promotion%201.jpg" style="width:100%">
                 </a>
             </div>
 
             <div class="slides">
                 <a href="dvd.php" target="_blank">
-                    <img src="../img/promotions/promotion 2.jpg" style="width:100%">
+                    <img src="../img/promotions/promotion%202.jpg" style="width:100%">
                 </a>
             </div>
 
             <div class="slides">
                 <a href="accessories.php" target="_blank">
-                    <img src="../img/promotions/promotion 3.jpg" style="width:100%">
+                    <img src="../img/promotions/promotion%203.jpg" style="width:100%">
             </div>
 
             <div class="slides">
                 <a href="games.php" target="_blank">
-                    <img src="../img/promotions/promotion 4.jpg" style="width:100%">
+                    <img src="../img/promotions/promotion%204.jpg" style="width:100%">
             </div>
 
             <div class="slides">
                 <a href="manga.php" target="_blank">
-                    <img src="../img/promotions/promotion 5.jpg" style="width:100%">
+                    <img src="../img/promotions/promotion%205.jpg" style="width:100%">
             </div>
             <!-- Next and previous buttons -->
             <div class="buttons">

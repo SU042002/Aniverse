@@ -48,6 +48,7 @@ label:hover {
 }
 
 .prodInput {
+    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -59,45 +60,15 @@ h1 {
 }
 
 p {
+    text-align: center;
     font-family: Arial;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.addForm {
-    /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
-    display: inline;
-    width: 360px;
-    height: 520px;
-    background-color: white;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-    padding-top: 50px;
-    border-style: solid;
-    border-color: #7918FE;
-}
-
-.deleteForm {
-    /* This is the whole form, I want to move it to the middle of the page and make it more customizable */
-    display: inline;
-    width: 360px;
-    height: 520px;
-    background-color: white;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-    padding-top: 50px;
-    border-style: solid;
-    border-color: #7918FE;
-}
-
-.product_container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    /*width: 100%;*/
-    padding-top: 80px;
-    padding-left: 28%;
+#select_options {
+    display: block;
+    margin: 0 auto;
 }
 
 /*.content {*/

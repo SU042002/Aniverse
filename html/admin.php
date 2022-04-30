@@ -54,7 +54,7 @@ if (isset($_SESSION["userType"])) {
                                style="visibility: hidden;">
                     </label> <!-- label used so it can be customized in css -->
                 </div>
-                <div class="prodInput">
+                <div class="prodInput" id="select_options">
                     <select name="productCat" required>
                         <option value="DVD">DVD</option>
                         <option value="Manga">Manga</option>
@@ -70,23 +70,39 @@ if (isset($_SESSION["userType"])) {
                 </div> <!-- when the user presses the button they will be able to submit the information -->
 
             </form>
-
-            <form name="deleteProd" action="../php/product_submission.php" method="post" enctype="multipart/form-data"
-                  class="deleteForm"> <!-- created a form -->
-                <h1>Delete Product</h1> <!-- header so the user knows they can add product -->
-                <!-- enctype is needed because there are files that are uploaded, images -->
-                <p>All the fields are required to submit!</p>
-                <div class="prodInput">
-                    <input class="input_box" type="text" name="productName" placeholder="Product Name" required
-                           autocomplete="off">
-                </div> <!-- creating seperate divisions for all the inputs -->
-
-                <div class="prodInput" id="submit_button">
-                    <button type="submit" class="add-button" name="submission">Add Product</button>
-                </div> <!-- when the user presses the button they will be able to submit the information -->
-
-            </form>
         </div>
+
+        <form name="addProd" action="../php/product_submission.php" method="post" enctype="multipart/form-data"
+              class="addForm">
+        <table>
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Upload Image</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+                <tr>
+                    <td>
+                        <div class="prodInput">
+                            <input class="input_box" type="text" name="productName" placeholder="Product Name" required
+                                   autocomplete="off">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prodInput">
+                            <input class="input_box" type="text" name="productPrice" placeholder="Price" required
+                                   autocomplete="off">
+                        </div>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+        </table>
+        </form>
 
         <div>
             <table>
