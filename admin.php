@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <?php require_once "php/database_connection.php"; ?>
+    <?php require_once "php/product_delete.php"; ?>
 </head>
 <body>
 
@@ -51,7 +54,7 @@ if (isset($_SESSION["userType"])) {
                                style="visibility: hidden;">
                     </label> <!-- label used so it can be customized in css -->
                 </div>
-                <div class="prodInput">
+                <div class="prodInput" id="select_options">
                     <select name="productCat" required>
                         <option value="DVD">DVD</option>
                         <option value="Manga">Manga</option>
@@ -67,25 +70,77 @@ if (isset($_SESSION["userType"])) {
                 </div> <!-- when the user presses the button they will be able to submit the information -->
 
             </form>
-
-            <form name="deleteProd" action="../php/product_submission.php" method="post" enctype="multipart/form-data"
-                  class="deleteForm"> <!-- created a form -->
-                <h1>Delete Product</h1> <!-- header so the user knows they can add product -->
-                <!-- enctype is needed because there are files that are uploaded, images -->
-                <p>All the fields are required to submit!</p>
-                <div class="prodInput">
-                    <input class="input_box" type="text" name="productName" placeholder="Product Name" required
-                           autocomplete="off">
-                </div> <!-- creating seperate divisions for all the inputs -->
-
-                <div class="prodInput" id="submit_button">
-                    <button type="submit" class="add-button" name="submission">Add Product</button>
-                </div> <!-- when the user presses the button they will be able to submit the information -->
-
-            </form>
         </div>
+
+        <form name="addProd" action="php/product_submission.php" method="post" enctype="multipart/form-data"
+              class="addForm">
+        <table>
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Upload Image</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+                <tr>
+                    <td>
+                        <div class="prodInput">
+                            <input class="input_box" type="text" name="productName" placeholder="Product Name" required
+                                   autocomplete="off">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="prodInput">
+                            <input class="input_box" type="text" name="productPrice" placeholder="Price" required
+                                   autocomplete="off">
+                        </div>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+        </table>
+        </form>
+
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                </tr>
+                </thead>
+                    <?php
+                    // setting connection to the database
+                    $sql = "SELECT * FROM products;";
+                    $res = mysqli_query($connectAniverse, $sql);
+                    // fetches all rows
+                    while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
+                    {
+                    ?>
+                        <tr>
+                            <td><?php echo $row["product_name"]?></td>
+                            <td><?php echo $row["product_price"]?></td>
+                            <td><?php echo $row["product_category"]?></td>
+                            <td>
+                                <a class="edit_button" href="admin.php?edit=<?php echo $row["id"]; ?>">Edit</a>
+                            </td>
+                            <td>
+                                <a class="delete_button" href="admin.php?delete=<?php echo $row["id"]; ?>">Delete</a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+            </table>
+        </div>
+
     </div>
 
+    <?php require "footer.php"; ?>
 
 </body>
 </html>

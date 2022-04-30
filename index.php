@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <script src="../js/slideshow.js" defer></script>
+    <link rel="stylesheet" href="css/default.css">
+    <script src="js/slideshow.js" defer></script>
     <!--If defer is not used, the JavaScript function will run before everything
 is loaded and this will in turn make the slideshow not work as intended.
 It will not load the first Image properly. By using defer it loads all the HTML
 and then executes the Javascript so everything works as intended-->
-    <link rel="stylesheet" href="../css/slideshow.css">
-    <link rel="stylesheet" href="../css/main%20footer.css">
-    <link rel="stylesheet" href="../css/products%20display.css">
-    <link rel="stylesheet" href="../css/search%20bar.css">
-    <?php require_once "../php/database_connection.php"; ?>
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <link rel="stylesheet" href="css/products%20display.css">
+    <link rel="stylesheet" href="css/search%20bar.css">
+    <?php require_once "php/database_connection.php"; ?>
 </head>
 <body>
 
@@ -25,29 +25,29 @@ and then executes the Javascript so everything works as intended-->
         <div class="slideshow">
             <div class="slides">
                 <a href="figures.php" target="_blank">
-                    <img src="../img/promotions/promotion 1.jpg" style="width:100%">
+                    <img src="img/promotions/promotion%201.jpg" style="width:100%">
                 </a>
             </div>
 
             <div class="slides">
                 <a href="dvd.php" target="_blank">
-                    <img src="../img/promotions/promotion 2.jpg" style="width:100%">
+                    <img src="img/promotions/promotion%202.jpg" style="width:100%">
                 </a>
             </div>
 
             <div class="slides">
                 <a href="accessories.php" target="_blank">
-                    <img src="../img/promotions/promotion 3.jpg" style="width:100%">
+                    <img src="img/promotions/promotion%203.jpg" style="width:100%">
             </div>
 
             <div class="slides">
                 <a href="games.php" target="_blank">
-                    <img src="../img/promotions/promotion 4.jpg" style="width:100%">
+                    <img src="img/promotions/promotion%204.jpg" style="width:100%">
             </div>
 
             <div class="slides">
                 <a href="manga.php" target="_blank">
-                    <img src="../img/promotions/promotion 5.jpg" style="width:100%">
+                    <img src="img/promotions/promotion%205.jpg" style="width:100%">
             </div>
             <!-- Next and previous buttons -->
             <div class="buttons">
