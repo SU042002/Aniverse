@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/banner.css">
-    <link rel="stylesheet" href="../css/main%20footer.css">
-    <link rel="stylesheet" href="../css/products%20display.css">
-    <?php require_once "../php/database_connection.php"; ?>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <link rel="stylesheet" href="css/products%20display.css">
+    <?php require_once "php/database_connection.php"; ?>
 
 </head>
 <body>

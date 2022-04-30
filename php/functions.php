@@ -47,7 +47,7 @@ function userNameExists($connectAniverse, $userName, $email) {
     $sql = "SELECT * FROM users WHERE userName = ? OR userEmail = ?;";
     $stmt = mysqli_stmt_init($connectAniverse);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../html/signup.php?error=sqlStatementFailed");
+        header("location: ../signup.php?error=sqlStatementFailed");
         exit();
     }
 
@@ -71,7 +71,7 @@ function createUser($connectAniverse, $userName, $email, $password, $userType) {
     $stmt = mysqli_stmt_init($connectAniverse);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../html/signup.php?error=sqlStatementFailed");
+        header("location: ../signup.php?error=sqlStatementFailed");
         exit();
     }
 
@@ -80,7 +80,7 @@ function createUser($connectAniverse, $userName, $email, $password, $userType) {
     mysqli_stmt_bind_param($stmt, "ssss", $userName, $email, $hashedPassword, $userType);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../html/signup.php?error=none");
+    header("location: ../signup.php?error=none");
     exit();
 }
 
@@ -99,7 +99,7 @@ function loginUser($connectAniverse, $userName, $password) {
     $userExists = userNameExists($connectAniverse, $userName, $userName);
 
     if ($userExists === false) {
-        header("location: ../html/login.php?error=invalidLogin");
+        header("location: ../login.php?error=invalidLogin");
         exit();
     }
 
@@ -107,14 +107,14 @@ function loginUser($connectAniverse, $userName, $password) {
     $passwordCheck = password_verify($password, $passwordHash);
 
     if ($passwordCheck === false) {
-        header("location: ../html/login.php?error=wrongPassword");
+        header("location: ../login.php?error=wrongPassword");
         exit();
     } elseif ($passwordCheck === true) {
         session_start();
         $_SESSION["userName"] = $userExists["userName"];
         $_SESSION["userType"] = $userExists["userType"];
 
-        header("location: ../html/index.php");
+        header("location: ../index.php");
         exit();
     }
 

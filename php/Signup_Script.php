@@ -12,33 +12,33 @@ if (isset($_POST["submit"])) {
     require_once "functions.php";
 
     if (emptyInputs($userName, $email, $password, $passwordCheck, $userType) !== false) {
-        header("location: ../html/signup.php?error=emptyFields");
+        header("location: ../signup.php?error=emptyFields");
         exit();
     }
 
     if (invalidUser($userName) !== false) {
-        header("location: ../html/signup.php?error=invalidUser");
+        header("location: ../signup.php?error=invalidUser");
         exit();
     }
 
     if (invalidEmail($email) !== false) {
-        header("location: ../html/signup.php?error=invalidEmail");
+        header("location: ../signup.php?error=invalidEmail");
         exit();
     }
 
     if (passwordMatch($password, $passwordCheck) !== false) {
-        header("location: ../html/signup.php?error=passwordsMatchInvalid");
+        header("location: ../signup.php?error=passwordsMatchInvalid");
         exit();
     }
 
     if (userNameExists($connectAniverse, $userName, $email, $userType) !== false) {
-        header("location: ../html/signup.php?error=userNameExists");
+        header("location: ../signup.php?error=userNameExists");
         exit();
     }
 
     createUser($connectAniverse, $userName, $email, $password, $userType);
 
 } else {
-    header("location: ../html/signup.php");
+    header("location: ../signup.php");
     exit();
 }

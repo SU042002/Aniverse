@@ -9,7 +9,7 @@ if(isset($_POST["submission"]))
     $hash = md5($random_number);
 
     $uploaded_file = $_FILES["productImg"]["name"]; /* the file that the user uploads */
-    $destination = "../img/product_image/".$hash.$uploaded_file; /* this changes the image file names */
+    $destination = "img/product_image/".$hash.$uploaded_file; /* this changes the image file names */
 
 
     $sql = "INSERT INTO products (product_name, product_price, product_desc, product_image, product_category) 
@@ -21,7 +21,7 @@ if(isset($_POST["submission"]))
     mysqli_query($connectAniverse, $sql);
     // this is all the columns that the data is inserted into in order
 
-    header("Location: ../html/admin.php?error=none");
+    header("Location: ../admin.php?error=none");
     /* header is changed so that there is not a double post problem and resubmission problem if
     the user refreshes the page for whatever reason */
 }

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/main%20footer.css">
-    <?php require_once "../php/database_connection.php"; ?>
-    <?php require_once "../php/product_delete.php"; ?>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <?php require_once "php/database_connection.php"; ?>
+    <?php require_once "php/product_delete.php"; ?>
 </head>
 <body>
 
@@ -72,7 +72,7 @@ if (isset($_SESSION["userType"])) {
             </form>
         </div>
 
-        <form name="addProd" action="../php/product_submission.php" method="post" enctype="multipart/form-data"
+        <form name="addProd" action="php/product_submission.php" method="post" enctype="multipart/form-data"
               class="addForm">
         <table>
             <thead>

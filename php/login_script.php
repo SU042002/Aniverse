@@ -9,13 +9,13 @@ if (isset($_POST["submit"])) {
     require_once "functions.php";
 
     if (emptyInputsLogin($userName, $password) !== false) {
-        header("location: ../html/login.php?error=fillAllFields");
+        header("location: ../login.php?error=fillAllFields");
         exit();
     }
 
     loginUser($connectAniverse, $userName, $password);
 
 } else {
-    header("location: ../html/login.php");
+    header("location: ../login.php");
     exit();
 }

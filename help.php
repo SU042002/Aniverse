@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/main%20footer.css">
-    <link rel="stylesheet" href="../css/help.css">
-    <script src="../js/help.js" defer></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <link rel="stylesheet" href="css/help.css">
+    <script src="js/help.js" defer></script>
     <!--If defer is not used, the JavaScript function will run before everything
 is loaded and this will in turn make the slideshow not work as intended.
 It will not load the first Image properly. By using defer it loads all the HTML

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/signup.css">
-    <?php require_once "../php/database_connection.php"; ?>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <?php require_once "php/database_connection.php"; ?>
 </head>
 <body>
 
 <?php require "header.php"; ?>
 
-<form class="login_form" action="../php/Signup_Script.php" method="post"> <!-- hides text in url -->
+<form class="login_form" action="php/Signup_Script.php" method="post"> <!-- hides text in url -->
 
     <h1>Sign Up</h1>
     <?php

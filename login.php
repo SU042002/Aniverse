@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <?php require_once "../php/database_connection.php"; ?>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/login.css">
+    <?php require_once "php/database_connection.php"; ?>
 </head>
 <body>
 
 <?php require "header.php"; ?>
 
-<form class="login_form" action="../php/login_script.php" method="post">
+<form class="login_form" action="php/login_script.php" method="post">
     <h1>Login</h1>
     <?php
     if (isset($_GET["error"])) {

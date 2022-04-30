@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniverse</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/banner.css">
-    <link rel="stylesheet" href="../css/main%20footer.css">
-    <link rel="stylesheet" href="../css/products%20display.css">
-    <?php require_once "../php/database_connection.php"; ?>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/main%20footer.css">
+    <link rel="stylesheet" href="css/products%20display.css">
+    <?php require_once "php/database_connection.php"; ?>
 
 </head>
 <body>
@@ -16,16 +16,16 @@
 
 <div id="container">
     <div id="main">
-        <div class="banner" id="games">
-            <h1>Games</h1>
-            <p>Stop playing Genshin Impact.</p>
+        <div class="banner" id="figures">
+            <h1>Figures</h1>
+            <p><q>This is the best place to buy figures!</q> - said no one... ever...</p>
         </div>
 
         <!--PRODUCTS-->
         <div class="products_gallery">
             <?php
             // setting connection to the database
-            $sql = "SELECT * FROM products WHERE product_category = 'Games';";
+            $sql = "SELECT * FROM products WHERE product_category = 'Figures';";
             $res = mysqli_query($connectAniverse, $sql);
             // fetches all rows
             while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
