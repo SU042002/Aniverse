@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <header>
     <div class="navigation_container">
         <div class="navigation">

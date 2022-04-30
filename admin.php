@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if (isset($_SESSION["userType"])) {
+    if ($_SESSION["userType"] == "User") {
+        header("location: index.php?error=notAdmin");
+    } else if ($_SESSION["userType"] == "Admin") {
+    }
+} else {
+    header("location: index.php?error=notAdmin");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +26,6 @@
 <body>
 
 <?php require "header.php"; ?>
-
-<?php
-
-if (isset($_SESSION["userType"])) {
-    if ($_SESSION["userType"] == "User") {
-        header("location: index.php?error=notAdmin");
-    } else if ($_SESSION["userType"] == "Admin") {
-    }
-} else {
-    header("location: index.php?error=notAdmin");
-}
-?>
 
 <div id="container">
     <div id="main">
