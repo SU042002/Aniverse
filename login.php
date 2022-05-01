@@ -16,7 +16,10 @@ session_start();
 <?php require "header.php"; ?>
 
 <form class="login_form" action="php/login_script.php" method="post">
+    <!--When this form is submitted the data is sent to the login script-->
     <h1>Login</h1>
+    <!--this php code makes sure the user knows what the error or what they did wrong if the login fails-->
+    <!--the superglobal is used to check the url and depending on the header, the appropriate message is displayed-->
     <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "fillAllFields") {

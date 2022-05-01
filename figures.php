@@ -27,11 +27,15 @@ session_start();
 
         <!--PRODUCTS-->
         <div class="products_gallery">
+            <!--This div is used to find all the products in the database with the category that is specified by the
+            webpage. The sql statement is used to fetch products where the category is equal to the theme of the page.-->
             <?php
             // setting connection to the database
             $sql = "SELECT * FROM products WHERE product_category = 'Figures';";
             $res = mysqli_query($connectAniverse, $sql);
             // fetches all rows
+            /*a similar process to what was done in the index page is performed here, the only thing that has changed is
+            the sql statement so that the appropriate information is fetched*/
             while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
             {
                 ?>

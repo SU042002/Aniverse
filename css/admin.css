@@ -59,6 +59,14 @@ h1 {
     color: black;
 }
 
+h2 {
+    margin-top: 18px;
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-family: Arial;
+    text-align: center;
+}
+
 p {
     text-align: center;
     font-family: Arial;

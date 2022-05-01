@@ -10,6 +10,7 @@ session_start();
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main%20footer.css">
     <link rel="stylesheet" href="css/help.css">
+    <!--This script is needed for the collapsable when the buttons are pressed below-->
     <script src="js/help.js" defer></script>
     <!--If defer is not used, the JavaScript function will run before everything
 is loaded and this will in turn make the slideshow not work as intended.
@@ -20,6 +21,8 @@ and then executes the Javascript so everything works as intended-->
 <?php require "header.php"; ?>
 
 <!--ALL THIS DUMMY TEXT WAS GENERATED FROM Lorem Ipsum-->
+<!--This is a table containing all the key people of the company (or not)-->
+<!--The table also contains mailto links for all the people so that they can be contacted-->
 
 <h2>IF YOU HAVE ISSUES YOU MAY CONTACT:</h2>
 <table>
@@ -59,6 +62,13 @@ and then executes the Javascript so everything works as intended-->
         <td><p><a href="mailto:naruto@email.com">Send email</a></p></td>
     </tr>
 </table>
+
+<!--All the separate sections are buttons. The idea is that these are collapsable and the buttons allow for this
+to happen-->
+<!--The buttons all have paragraphs below them that are either shown or not displayed depending on if they were clicked
+or not-->
+<!--The javascript file at the top of this page hides or shows the paragraph depending on the state of the button -->
+<!--All of this is repeated multiple times to fill this help section with information-->
 
 <h2>FREQUENTLY ASKED QUESTIONS</h2>
 <button type="button" class="section">Where is my order? (USE OF ORDERED LIST AND UNORDERED LIST)</button>
@@ -287,6 +297,7 @@ and then executes the Javascript so everything works as intended-->
         aliquet neque at enim tristique aliquet. Fusce ut dui quis mi euismod bibendum. Suspendisse potenti. Aliquam non
         quam cursus, sagittis turpis sit amet, ultricies risus.</p>
 </div>
-
+<!--This is included in most of the pages and is the footer of the webpage, it is in a separate file because it is a
+piece of code that is reused often-->
 <?php require "footer.php"; ?>
 </body>

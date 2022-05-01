@@ -2,6 +2,9 @@
     <div class="navigation_container">
         <div class="navigation">
 
+            <!--this code is used to change the links based on what user type is present.
+            For example, if the admin session is started then the user can see the admin section.
+            If the user is logged in this is shows so that the user can log out.-->
             <?php
             if (isset($_SESSION["userType"])) {
                 if ($_SESSION["userType"] == "Admin") {
@@ -19,7 +22,10 @@
             }
             ?>
 
+            <!--The other links include basics like baskets and homepages etc...-->
+
             <a class="nav" href="#">Basket
+                <!--this is used to add an image to the left of each link-->
                 <img src="img/icons/cart%20(2).png" class="home">
             </a>
 
@@ -36,6 +42,8 @@
             </a>
         </div>
 
+        <!--This is the second header below the main header, this allows the user to browse the subsections
+        of the website-->
         <div class="second_navigation">
             <ul id="second_nav">
                 <li><a href="dvd.php">DVD</a></li>

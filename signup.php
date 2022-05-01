@@ -18,6 +18,8 @@ session_start();
 <form class="login_form" action="php/Signup_Script.php" method="post"> <!-- hides text in url -->
 
     <h1>Sign Up</h1>
+    <!--this php code makes sure the user knows what the error or what they did wrong if the signup fails-->
+    <!--the superglobal is used to check the url and depending on the header, the appropriate message is displayed-->
     <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyInputs") {
@@ -37,7 +39,7 @@ session_start();
         }
     }
     ?>
-
+<!--These are all the inputs required by the user to fill-->
     <div class="login_fields">
         <input type="text" name="user_name" placeholder="Username" required autocomplete="off">
     </div>

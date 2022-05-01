@@ -1,5 +1,10 @@
 <?php
 session_start();
+/*this is used to start a session on every page. This is done
+so that users can create an account and save what ever they are doing.
+Sessions also allow us to check for admin privileges. They allow
+us to use other super globals that we can use to make each user session
+personal.*/
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +16,8 @@ session_start();
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/main%20footer.css">
     <link rel="stylesheet" href="css/products%20display.css">
+    <!--this connection is required to connect to the database. Any page that fetches information dynamically needs
+  this file so that the connection can be performed.-->
     <?php require_once "php/database_connection.php"; ?>
 
 </head>
@@ -27,11 +34,15 @@ session_start();
 
         <!--PRODUCTS-->
         <div class="products_gallery">
+            <!--This div is used to find all the products in the database with the category that is specified by the
+            webpage. The sql statement is used to fetch products where the category is equal to the theme of the page.-->
             <?php
             // setting connection to the database
             $sql = "SELECT * FROM products WHERE product_category = 'DVD';";
             $res = mysqli_query($connectAniverse, $sql);
             // fetches all rows
+            /*a similar process to what was done in the index page is performed here, the only thing that has changed is
+            the sql statement so that the appropriate information is fetched*/
             while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
             {
                 ?>
@@ -56,7 +67,8 @@ session_start();
 <!--PRODUCTS-->
     </div>
 </div>
-
+<!--This is included in most of the pages and is the footer of the webpage, it is in a separate file because it is a
+piece of code that is reused often-->
 <?php require "footer.php"; ?>
 
 </body>
