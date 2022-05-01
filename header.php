@@ -24,7 +24,7 @@
 
             <!--The other links include basics like baskets and homepages etc...-->
 
-            <a class="nav" href="#">Basket
+            <a class="nav" href="basket.php">Basket
                 <!--this is used to add an image to the left of each link-->
                 <img src="img/icons/cart%20(2).png" class="home">
             </a>
