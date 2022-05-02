@@ -1,6 +1,3 @@
-<?php
-    require_once "php/basket_functions.php";
-?>
 <header>
     <div class="navigation_container">
         <div class="navigation">

@@ -5,7 +5,7 @@ this file so that the connection can be performed.-->
 <?php
 /*starts a session in every window*/
 session_start();
-
+require_once "php/basket_functions.php";
 
 /*this is used to start a session on every page. This is done
 so that users can create an account and save what ever they are doing.
