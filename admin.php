@@ -1,12 +1,12 @@
 <?php
+session_start();
+require_once "php/database_connection.php";
+require_once "php/basket_functions.php";
 /*this is used to start a session on every page. This is done
 so that users can create an account and save what ever they are doing.
 Sessions also allow us to check for admin privileges. They allow
 us to use other super globals that we can use to make each user session
 personal.*/
-session_start();
-require_once "php/basket_functions.php";
-
 /*This check is used to see if the user accessing the page is an admin, if they are not then they are kicked out
 with an error code saying notAdmin*/
 if (isset($_SESSION["userType"])) {
@@ -34,7 +34,6 @@ $price = "";
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/main%20footer.css">
     <!--These files are used to connect to the database and used to delete and edit products-->
-    <?php require_once "php/database_connection.php"; ?>
     <?php require_once "php/product_delete.php"; ?>
     <?php require_once "php/product_edit.php"; ?>
 </head>

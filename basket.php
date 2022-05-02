@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "php/database_connection.php";
 require_once "php/basket_functions.php";
 ?>
 
@@ -16,7 +17,6 @@ require_once "php/basket_functions.php";
     <link rel="stylesheet" href="css/basket.css">
     <!--this connection is required to connect to the database. Any page that fetches information dynamically needs
     this file so that the connection can be performed.-->
-    <?php require_once "php/database_connection.php"; ?>
 </head>
 
 <body>

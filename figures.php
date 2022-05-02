@@ -1,12 +1,9 @@
-<!--this connection is required to connect to the database. Any page that fetches information dynamically needs
-this file so that the connection can be performed.-->
-<?php require_once "php/database_connection.php"; ?>
-
 <?php
-/*starts a session in every window*/
 session_start();
+require_once "php/database_connection.php";
+require_once "php/database_connection.php";
 require_once "php/basket_functions.php";
-
+/*starts a session in every window*/
 
 /*this is used to start a session on every page. This is done
 so that users can create an account and save what ever they are doing.
@@ -24,7 +21,6 @@ personal.*/
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/main%20footer.css">
     <link rel="stylesheet" href="css/products%20display.css">
-    <?php require_once "php/database_connection.php"; ?>
 
 </head>
 <body>

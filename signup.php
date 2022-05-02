@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "php/database_connection.php";
 require_once "php/basket_functions.php";
 ?>
 
@@ -10,7 +11,6 @@ require_once "php/basket_functions.php";
     <title>Aniverse</title>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/signup.css">
-    <?php require_once "php/database_connection.php"; ?>
 </head>
 <body>
 
