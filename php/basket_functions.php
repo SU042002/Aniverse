@@ -25,15 +25,9 @@ if(isset($_GET["prodID"])) {
     }
 }
 
-/*used to print array of basket*/
-/*pre tag adds line break to everything */
-echo "<pre>";
-print_r($_SESSION["basket"]);
-echo "</pre>";
-
 if(isset($_POST ["clear_basket"])) {
     /*the array is instantiated again to "clear" it*/
     $_SESSION["basket"] = array();
     header("location: basket.php?clear=success");
-
 }
+

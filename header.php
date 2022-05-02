@@ -1,3 +1,6 @@
+<?php
+    require_once "php/basket_functions.php";
+?>
 <header>
     <div class="navigation_container">
         <div class="navigation">
@@ -24,7 +27,7 @@
 
             <!--The other links include basics like baskets and homepages etc...-->
 
-            <a class="nav" href="basket.php">Basket
+            <a class="nav" href="basket.php">Basket <?php echo array_sum($_SESSION["basket"])?>
                 <!--this is used to add an image to the left of each link-->
                 <img src="img/icons/cart%20(2).png" class="home">
             </a>
