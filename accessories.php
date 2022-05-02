@@ -1,5 +1,17 @@
+<!--this connection is required to connect to the database. Any page that fetches information dynamically needs
+this file so that the connection can be performed.-->
+
 <?php
+/*starts a session in every window*/
 session_start();
+
+require_once "php/basket_functions.php";
+
+/*this is used to start a session on every page. This is done
+so that users can create an account and save what ever they are doing.
+Sessions also allow us to check for admin privileges. They allow
+us to use other super globals that we can use to make each user session
+personal.*/
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +62,13 @@ the website-->
                     <!-- product price is grabbed from the column -->
                     <p class="product-p"><?php echo $row["product_name"]; ?></p>
                     <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-                    <button type="submit" class="add-button" name="submission">Add Product</button>
+                    <form id="addBasket" action="" method="get">
+                        <!--hidden input field so when the user adds something to basket the product id for that
+                        individual product can be used.-->
+                        <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
+                        <input type="hidden" name="prodID" id="prodID" value="<?php echo $row["id"]; ?>">
+                        <button type="basket" class="add-button">Add Product</button>
+                    </form>
                     <!-- add to basket button -->
                 </div>
                 <?php
