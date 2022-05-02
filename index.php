@@ -6,7 +6,7 @@ this file so that the connection can be performed.-->
 /*starts a session in every window*/
 session_start();
 
-require_once "php/basket.php";
+require_once "php/basket functions.php";
 
 /*this is used to start a session on every page. This is done
 so that users can create an account and save what ever they are doing.
@@ -124,7 +124,7 @@ the website-->
                             <!-- product price is grabbed from the column -->
                             <p class="product_p"><?php echo $row["product_name"]; ?></p>
                             <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-                            <form id="addBasket" action="php/basket.php" method="get">
+                            <form id="addBasket" action="php/basket functions.php" method="get">
                                 <!--hidden input field so when the user adds something to basket the product id for that
                                 individual product can be used.-->
                                 <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">

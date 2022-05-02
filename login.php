@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+require_once "php/basket functions.php";
 ?>
 
 <!DOCTYPE html>
