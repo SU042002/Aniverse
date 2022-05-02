@@ -126,8 +126,8 @@ the website-->
                             <form id="addBasket" action="" method="get">
                                 <!--hidden input field so when the user adds something to basket the product id for that
                                 individual product can be used.-->
-                                <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
                                 <input type="hidden" name="prodID" id="prodID" value="<?php echo $row["id"]; ?>">
+                                <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
                                 <button type="basket" class="add-button">Add Product</button>
                             </form>
                             <!-- add to basket button -->
@@ -169,8 +169,8 @@ the website-->
                     <form id="addBasket" action="" method="get">
                         <!--hidden input field so when the user adds something to basket the product id for that
                         individual product can be used.-->
-                        <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
                         <input type="hidden" name="prodID" id="prodID" value="<?php echo $row["id"]; ?>">
+                        <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
                         <button type="basket" class="add-button">Add Product</button>
                     </form>
                 </div>

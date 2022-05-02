@@ -15,12 +15,12 @@ if(isset($_GET["prodID"])) {
     if(isset($_SESSION["basket"][$id])){
         /*if the item exists in the basket then increment the item quantity*/
         $_SESSION["basket"][$id] += $quantity;
-        /*changes the header so if the user refreshes the item is not added again*/
+        /*changes the header so if the user refreshes the item is not added again using get method*/
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
         /*if one of the item exists then the quantity will be 1*/
         $_SESSION["basket"][$id] = $quantity;
-        /*changes the header so if the user refreshes the item is not added again*/
+        /*changes the header so if the user refreshes the item is not added again using get method*/
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
