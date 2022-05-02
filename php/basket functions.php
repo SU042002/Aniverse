@@ -16,19 +16,12 @@ if(isset($_GET["prodID"])) {
         /*if the item exists in the basket then increment the item quantity*/
         $_SESSION["basket"][$id] += $quantity;
         /*changes the header so if the user refreshes the item is not added again*/
-        if ($_GET["search"]) {
-            header("location: ../index.php?success=addedQuantity");
-        } else {
-            header("location: index.php?success=addedQuantity");
-        }
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
         /*if one of the item exists then the quantity will be 1*/
         $_SESSION["basket"][$id] = $quantity;
-        if ($_GET["search"]) {
-            header("location: ../index.php?success=addedItem");
-        }
-            /*changes the header so if the user refreshes the item is not added again*/
-        header("location: index.php?success=addedItem");
+        /*changes the header so if the user refreshes the item is not added again*/
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
 
