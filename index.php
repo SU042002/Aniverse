@@ -106,7 +106,12 @@ the website-->
             second is the actual statement to be performed*/
             $res = mysqli_query($connectAniverse, $sql);
             // fetches all rows
-            while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
+            while ($row = mysqli_fetch_array($res))
+                /*initializes new variable and assigns a value to it*/
+                /*this helps fetch one of the rows of data and returns it as an associative array*/
+                /*the while loop means that every row will eventually be fetched until there are none left*/
+                /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/
+                // if row is fetched while code is executed
             {
                 ?>
                     <!--this while loop is what outputs all the products in the database. Using php statements all the
@@ -115,9 +120,11 @@ the website-->
                 <!--All the information fetched from the individual row from the array is output or echoed-->
                 <!--This is done for all the products that where searched for-->
                         <div class="content" id="<?php echo $row["product_name"]; ?>">
-                            <!-- html and php used together so that products from the data base are displayed -->
+                            <!-- html and php used together so that products from the database are displayed -->
+                            <!--the product name of the row is fetched and used here-->
                             <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
                                  height="150px" class="product_img"/>
+                            <!--the product image path of the row is fetched and used here-->
                             <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
                             <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
                             <!-- product price is grabbed from the column -->
@@ -150,7 +157,12 @@ the website-->
             $sql = "SELECT * FROM products;";
             $res = mysqli_query($connectAniverse, $sql);
             // fetches all rows
-            while ($row = mysqli_fetch_array($res)) // if row is fetched while code is executed
+            while ($row = mysqli_fetch_array($res))
+                /*initializes new variable and assigns a value to it*/
+                /*this helps fetch one of the rows of data and returns it as an associative array*/
+                /*the while loop means that every row will eventually be fetched until there are none left*/
+                /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/
+                // if row is fetched while code is executed
             {
                 ?>
                 <!--this while loop is what outputs all the products in the database. Using php statements all the
@@ -158,9 +170,11 @@ the website-->
                 can be fetched using names rather than numbers-->
                 <!--All the information fetched from the individual row from the array is output or echoed--><!---->
                 <div class="content" id="<?php echo $row["product_name"]; ?>">
-                    <!-- html and php used together so that products from the data base are displayed -->
+                    <!-- html and php used together so that products from the database are displayed -->
+                    <!--the product name of the row is fetched and used here-->
                     <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
                          height="150px" class="product_img"/>
+                    <!--the product image path of the row is fetched and used here-->
                     <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
                     <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
                     <!-- product price is grabbed from the column -->
@@ -181,9 +195,10 @@ the website-->
     </div>
 </div>
 <!--PRODUCTS-->
+
+<?php require "footer.php"; ?>
 <!--This is included in most of the pages and is the footer of the webpage, it is in a separate file because it is a
 piece of code that is reused often-->
-<?php require "footer.php"; ?>
 
 </body>
 </html>

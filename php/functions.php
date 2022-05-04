@@ -1,6 +1,9 @@
 <?php
 /*These are all functions used by the login and logout system.*/
 
+/*if any of these functions return true for variable $result, that means that something went wrong and a result was
+triggered, hence an error has occurred because of the user or the system */
+
 /*This function checks if there are any empty fields and if anything needs to be filled. It returns a variable called
 return depending on if the fields are empty or not. If anything is empty, it returns as true and makes the user fill in
 information again*/
@@ -20,6 +23,9 @@ it will return a result variable true if the user uses any invalid characters*/
 function invalidUser($userName) {
     $result;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $userName)) {
+        /*regular expression match is used to check username*/
+        /*if it doesn't match the regular expression then true is returned, there is a ! before the method to do the
+        opposite*/
         $result = true;
     }
     else {
@@ -31,6 +37,7 @@ function invalidUser($userName) {
 /*this functions uses a builtin php function to check if the email that the user entered is a valid email*/
 function invalidEmail($email) {
     $result;
+    /*a default php function is used to check the validity of the email*/
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     }
@@ -135,7 +142,6 @@ function createUser($connectAniverse, $userName, $email, $password, $userType) {
     exit();
 }
 
-/*this checks if any of the inputs are empty*/
 function emptyInputsLogin($userName, $password) {
     $result;
     if (empty($userName) || empty($password)) {
@@ -146,6 +152,7 @@ function emptyInputsLogin($userName, $password) {
     }
     return $result;
 }
+/*this checks if any of the inputs are empty, similar to a function above*/
 
 /*this function is used to login the user*/
 function loginUser($connectAniverse, $userName, $password) {
@@ -170,6 +177,8 @@ function loginUser($connectAniverse, $userName, $password) {
     } elseif ($passwordCheck === true) {
         /*if the password is correct, a session is started for that user and user type depending on if they are an admin
         or not.*/
+        /*these super global variables can be used later by the website, for instance, for the admin page to check
+        if the user has the right privileges to view that page*/
         session_start();
         $_SESSION["userName"] = $userExists["userName"];
         $_SESSION["userType"] = $userExists["userType"];
@@ -177,6 +186,5 @@ function loginUser($connectAniverse, $userName, $password) {
         header("location: ../index.php");
         exit();
     }
-
 
 }

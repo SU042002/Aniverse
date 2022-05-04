@@ -1,5 +1,6 @@
 <?php
 /*this is all the information used to connect to the database*/
+/*the local xampp server does not have a password*/
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";

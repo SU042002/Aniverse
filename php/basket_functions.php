@@ -28,6 +28,8 @@ if(isset($_GET["prodID"])) {
 if(isset($_POST ["clear_basket"])) {
     /*the array is instantiated again to "clear" it*/
     $_SESSION["basket"] = array();
+    /*the header is changed again to inform the user that the basket has indeed been cleared*/
+    /*this could also be used later to output some type of message based on the url*/
     header("location: basket.php?clear=success");
 }
 
