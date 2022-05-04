@@ -13,10 +13,12 @@
     outline: none;
     font-size: 15px;
 }
+/*this is to set all the styling of the main collapsable header*/
 
 .active, .section:hover {
     background-color: #131127;
 }
+/*when the user hovers over the header, it changes colour*/
 
 .information {
     color: white;
@@ -24,11 +26,13 @@
     border-radius: 0 0 12px 12px;
     padding: 8px 40px;
     display: none;
-    overflow: hidden;
     background-color: #7918FE;
     margin-left: 25%;
     margin-right: 25%;
 }
+/*the information in the collapsible are styled here*/
+/*the display is none so it does not show initially*/
+
 
 h2 {
     font-family: Arial;
@@ -38,7 +42,9 @@ h2 {
     padding-top: 30px;
     padding-bottom: 20px;
 }
+/*the header formatting is set here*/
 
+/*the styling for the table is set*/
 table {
     background-color:#131127 ;
     margin-top: 30px;
@@ -49,6 +55,7 @@ table {
     font-family: arial;
     width: 30%;
 }
+/*the styling for the table is set*/
 
 td, th {
     background-color: #131127;
@@ -61,5 +68,6 @@ a {
     text-decoration: none;
     color: salmon;
 }
-
+/*the hyperlink styling is set*/
+/*the styling for the table is set*/
 

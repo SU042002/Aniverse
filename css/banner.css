@@ -5,37 +5,59 @@
     color: white;
     font-size: 30px;
 }
+/*used to target banner*/
+/*sets font and padding*/
+/*aligns all the text to the center of the banner*/
+/*makes the text white*/
+/*sets the size of the font*/
 
 .banner h1 {
     font-size: 74px;
 }
+/*makes the header font size bigger*/
 
 .banner p {
     font-size: 24px;
 }
+/*sets the font of the paragraph below the banner*/
 
 #manga {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner manga 2.jpg");
 }
+/*sets the image for each individual banner by using the id*/
+/*sets a black overlay over the image with a slight opacity so the image is still visible*/
+/*sets the url of the image*/
 
 #dvd {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner dvd.jpg");
     width: auto;
 }
+/*sets the image for each individual banner by using the id*/
+/*sets a black overlay over the image with a slight opacity so the image is still visible*/
+/*sets the url of the image*/
 
 #figures {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner figures.jpg");
 }
+/*sets the image for each individual banner by using the id*/
+/*sets a black overlay over the image with a slight opacity so the image is still visible*/
+/*sets the url of the image*/
 
 #games {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner games 2.jpg");
 }
+/*sets the image for each individual banner by using the id*/
+/*sets a black overlay over the image with a slight opacity so the image is still visible*/
+/*sets the url of the image*/
 
 #accessories {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../img/banner/banner accessories.jpg");
 }
+/*sets the image for each individual banner by using the id*/
+/*sets a black overlay over the image with a slight opacity so the image is still visible*/
+/*sets the url of the image*/

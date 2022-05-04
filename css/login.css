@@ -4,14 +4,19 @@
     background-color: white;
     padding: 60px 20px;
     border-radius: 12px;
+    /*the border radius is set to make it look more modern*/
     position: relative;
+    /*the position is relative to all the other elements*/
     left: 50%;
     transform: translateX(-50%);
+    /*this is set so the form is in the center of the page*/
     margin-top: 60px;
     margin-bottom: 40px;
     border-style: solid;
     border-color: #7918FE;
 }
+/*the styling for the main form is set*/
+
 
 h1{
     font-family: Arial;
@@ -20,6 +25,7 @@ h1{
     text-align: center;
     padding-bottom: 3px;
 }
+/*the login header is set*/
 
 h2{
     color: red; /* In red so it is easier to see and
@@ -30,9 +36,10 @@ h2{
 
 .login_fields{
     border-bottom: 2px solid #adadad;
-    position: relative;
+    /*this makes it show only a line at the bottom of the field*/
     margin: 60px 0;
 }
+/*the login fields or input fields are styled*/
 
 .login_fields input{
     font-size: 15px;
@@ -45,6 +52,7 @@ h2{
     height: 40px;
 }
 
+/*STYLING FOR BUTTON*/
 .login_button{
     display: block;
     width: 100%;
@@ -62,6 +70,8 @@ h2{
 .login_button:hover{
     background-position: right;
 }
+/*STYLING FOR BUTTON*/
+/*the styling for the button is similar across the entire website, the only thing that has changed is the colour and size*/
 
 .bottom_text{
     padding-top: 20px;

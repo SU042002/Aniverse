@@ -2,6 +2,8 @@
 .slideshow {
     position: relative;
 }
+/*this is used to set the position of the images*/
+/*this makes sure the position is just below the navigation bar*/
 
 .prev, .next {
     cursor: pointer;
@@ -15,9 +17,11 @@
     background: #131127;
     user-select: none;
 }
+/*this styles the buttons of the slider*/
 
 .next {
     right: 0;
 }
+/*this sets the position of the next button, otherwise it would be on the left side of the page with the prev button*/
 
 /*SLIDESHOW*/

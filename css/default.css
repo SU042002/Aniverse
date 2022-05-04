@@ -4,17 +4,18 @@
     margin: 0;
     padding: 0;
 }
+/*removes all the outer lines and set margin and padding of the site to 0*/
+/*makes sure the site fills the full page and no lines are visible on the borders of the site*/
 
 body {
-    /*background-image: linear-gradient(to right, #F7CAC9, #FA8072);*/
     background-color: white;
-    /*Position relative and min height sets the page container. This helps keep the footer (child element)
-    at 0 or the bottom based on absolute position.*/
 }
+/*sets background colour to white*/
 
 h1, p {
     cursor: default;
 }
+/*Sets the cursor to default if the user hovers above any text or headers*/
 
 /* NAVIGATION: */
 
@@ -25,6 +26,14 @@ h1, p {
     position: relative;
     z-index: 1;
 }
+/*this is for the navigation bar*/
+/*sets the background colour*/
+/*the height of the div*/
+/*overflow hidden prevents scroll bar*/
+/*sets the position to relative so everything is in a normal position*/
+/*the z index is 1 so it appears at the very top*/
+
+
 
 .nav {
     float: right;
@@ -36,6 +45,9 @@ h1, p {
     font-family: arial;
     font-weight: bold;
 }
+/*sets the styling for the links*/
+/*everything floats to the right of the navigation bar*/
+/*the text decoration removes any weird formatting*/
 
 .nav img {
     width: 25px;
@@ -43,16 +55,20 @@ h1, p {
     margin-right: 5px;
     float: left;
 }
+/*this sets the styling for all the images next to the links*/
 
 .navigation a:hover {
     color: #FF8C69;
 }
+/*this changes the colour so when a link is hovered over, the colour is turned to salmon*/
 
 .logo {
     display: inline-block;
     margin-left: 15px;
     margin-top: 10px;
 }
+/*this sets the styling of the logo of the site*/
+/*the display sets display behaviour of the element*/
 
 .second_navigation {
     position: relative;
@@ -61,15 +77,19 @@ h1, p {
     overflow: hidden;
     z-index: 1;
 }
+/*styles the second navigation bar for the different categories of products*/
+/*uses similar styling to the first header*/
 
 #second_nav {
     padding-top: 15px;
     text-align: center;
 }
+/*the text is aligned for the center for this bar, different from the first navigation bar*/
 
 #second_nav li {
     display: inline;
 }
+/*this helps display all the text on the same line*/
 
 #second_nav a {
     text-decoration: none;
@@ -79,15 +99,13 @@ h1, p {
     font-family: arial;
     font-weight: bold;
 }
+/*this sets all the styling for the text of the navigation bar*/
 
 #second_nav a:hover {
     color: salmon;
 }
-
-#curve {
-    position: absolute;
-    bottom: 380px;
-}
+/*when the user hovers over the links, the colour of the links change so that the user know they are interacting with
+the element*/
 
 /* NAVIGATION */
 
@@ -106,3 +124,5 @@ h1, p {
     color: white;
     text-align: center;
 }
+/*this is for styling all the content or rather the products of the website. This is required for all the products
+and the products show up on multiple pages so it is in the default css that is used on all the pages.*/

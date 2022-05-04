@@ -19,11 +19,16 @@
     top: 20px;
     text-align: center;
 }
+/*sets the css for the buttons*/
+/*for the clear cart*/
+/*for the purchase button that does nothing*/
 
 .clear_basket:hover {
     background-position: right;
-    /* when the user hovers above it this property makes it look animated */
 }
+/* when the user hovers above it this property makes it look animated */
+
 #purchase {
     margin-top: 14px;
 }
+/*this allows for some space between the buttons*/

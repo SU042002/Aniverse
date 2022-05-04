@@ -1,3 +1,7 @@
+/*the signup css uses all the same code as the login form*/
+/*the only exception is some of the sizing to accommodate the sign up form instead because it does have more fields*/
+/*extra styling for the drop down user type is also added as that is not present in the login form*/
+
 .login_form{
     margin-top: 50px;
     width: 320px;

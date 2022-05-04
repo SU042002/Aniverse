@@ -1,14 +1,15 @@
 .products_gallery {
     display: inline-block;
-    flex-wrap: wrap;
     /*width: 100%;*/
     padding-left: 43px;
-    overflow: hidden;
 }
+/*this is to set the styling of products*/
+/*the padding the main product container more*/
 
 .search_gallery {
     padding-left: 43px;
 }
+/*this is for when the user searches for an item and to align the items according to the rest of the products*/
 
 .content {
     margin-left: 44px;
@@ -18,6 +19,7 @@
     background-color: #131127;
     border-radius: 12px;
 }
+/*this styles each product card*/
 
 .add-button {
     /* the add button is the submit button */
@@ -43,11 +45,9 @@
 
 .add-button:hover {
     background-position: right;
-    /* when the user hovers above it this property makes it look animated */
 }
 
 .clear {
-    /* the add button is the submit button */
     display: block;
     width: 145px;
     height: 45px;
@@ -70,5 +70,4 @@
 
 .clear:hover {
     background-position: right;
-    /* when the user hovers above it this property makes it look animated */
 }
