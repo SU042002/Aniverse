@@ -34,6 +34,7 @@ and then executes the Javascript so everything works as intended-->
     <link rel="stylesheet" href="css/search%20bar.css">
 </head>
 <body>
+
 <!--this stores all the components of the header in a php file. This is done so the same code can be reused throughout
 the website-->
 <?php require "header.php"; ?>
@@ -94,31 +95,34 @@ the website-->
         <div class="search_gallery">
             <!--if the used presses the search button then the information is taken from the search bar and that is
             used to search the database for products.-->
-        <?php
-        if(isset($_GET['search'])) {
-            $searchQuery = $_GET['search'];
+            <?php
+            if (strpos($_SERVER['REQUEST_URI'], "search") !== false) {
+                /*if the url contains search then this is executed, if = to true*/
+                /*if the url contains a search query this is executed*/
+                /*if the url does not contain a search in the url then all the products are shown using an else*/
+                if (isset($_GET['search'])) {
+                    $searchQuery = $_GET['search'];
 
-            // setting connection to the database
-            /*the sql query is stored in a variable and all the user input is searched in the database using the LIKE
-            keyword which is built into sql. This returns anything related to the word that was entered by the user*/
-            $sql = "SELECT * FROM products WHERE product_name LIKE'%$searchQuery%' or id LIKE '$searchQuery' or product_category LIKE '$searchQuery';";
-            /*this performs the query on the database, the first argument is the connection to the database and the
-            second is the actual statement to be performed*/
-            $res = mysqli_query($connectAniverse, $sql);
-            // fetches all rows
-            while ($row = mysqli_fetch_array($res))
-                /*initializes new variable and assigns a value to it*/
-                /*this helps fetch one of the rows of data and returns it as an associative array*/
-                /*the while loop means that every row will eventually be fetched until there are none left*/
-                /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/
-                // if row is fetched while code is executed
-            {
-                ?>
-                    <!--this while loop is what outputs all the products in the database. Using php statements all the
-                    products are output using echo. All the products are fetched as an associative array so everything
-                    can be fetched using names rather than numbers-->
-                <!--All the information fetched from the individual row from the array is output or echoed-->
-                <!--This is done for all the products that where searched for-->
+                    // setting connection to the database
+                    /*the sql query is stored in a variable and all the user input is searched in the database using the LIKE
+                    keyword which is built into sql. This returns anything related to the word that was entered by the user*/
+                    $sql = "SELECT * FROM products WHERE product_name LIKE'%$searchQuery%' or id LIKE '$searchQuery' or product_category LIKE '$searchQuery';";
+                    /*this performs the query on the database, the first argument is the connection to the database and the
+                    second is the actual statement to be performed*/
+                    $res = mysqli_query($connectAniverse, $sql);
+                    // fetches all rows
+                    while ($row = mysqli_fetch_array($res))
+                        /*initializes new variable and assigns a value to it*/
+                        /*this helps fetch one of the rows of data and returns it as an associative array*/
+                        /*the while loop means that every row will eventually be fetched until there are none left*/
+                        /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/ // if row is fetched while code is executed
+                    {
+                        ?>
+                        <!--this while loop is what outputs all the products in the database. Using php statements all the
+                        products are output using echo. All the products are fetched as an associative array so everything
+                        can be fetched using names rather than numbers-->
+                        <!--All the information fetched from the individual row from the array is output or echoed-->
+                        <!--This is done for all the products that where searched for-->
                         <div class="content" id="<?php echo $row["product_name"]; ?>">
                             <!-- html and php used together so that products from the database are displayed -->
                             <!--the product name of the row is fetched and used here-->
@@ -139,61 +143,65 @@ the website-->
                             </form>
                             <!-- add to basket button -->
                         </div>
-                <?php
-            }
-            ?>
-            <?php
-            }
-        ?>
-        </div>
-        <!--SEARCH BAR-->
+                        <?php
+                    }
+                    ?>
+            <div class="products_gallery">
+                    <?php
+                }
+            } else {
+                    // setting connection to the database
+                    /*the sql query is stored in a variable and all the user input is searched in the database using the LIKE
+                    keyword which is built into sql. This returns anything related to the word that was entered by the user*/
+                    $sql = "SELECT * FROM products;";
+                    $res = mysqli_query($connectAniverse, $sql);
+                    // fetches all rows
+                    while ($row = mysqli_fetch_array($res))
+                        /*initializes new variable and assigns a value to it*/
+                        /*this helps fetch one of the rows of data and returns it as an associative array*/
+                        /*the while loop means that every row will eventually be fetched until there are none left*/
+                        /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/ // if row is fetched while code is executed
+                    {
+                        ?>
+                        <!--this while loop is what outputs all the products in the database. Using php statements all the
+                        products are output using echo. All the products are fetched as an associative array so everything
+                        can be fetched using names rather than numbers-->
+                        <!--All the information fetched from the individual row from the array is output or echoed--><!---->
+                        <div class="content" id="<?php echo $row["product_name"]; ?>">
+                            <!-- html and php used together so that products from the database are displayed -->
+                            <!--the product name of the row is fetched and used here-->
+                            <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
+                                 height="150px" class="product_img"/>
+                            <!--the product image path of the row is fetched and used here-->
+                            <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
+                            <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
+                            <!-- product price is grabbed from the column -->
+                            <p class="product_p"><?php echo $row["product_name"]; ?></p>
+                            <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
+                            <form id="addBasket" action="" method="get">
+                                <!--hidden input field so when the user adds something to basket the product id for that
+                                individual product can be used.-->
+                                <input type="hidden" name="prodID" id="prodID" value="<?php echo $row["id"]; ?>">
+                                <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
+                                <button type="basket" class="add-button">Add Product</button>
+                            </form>
+                        </div>
+                        <?php
+                    }
+                    }
+                    ?>
 
-        <!--PRODUCTS-->
-        <div class="products_gallery">
-            <?php
-            // setting connection to the database
-            /*the sql query is stored in a variable and all the user input is searched in the database using the LIKE
-            keyword which is built into sql. This returns anything related to the word that was entered by the user*/
-            $sql = "SELECT * FROM products;";
-            $res = mysqli_query($connectAniverse, $sql);
-            // fetches all rows
-            while ($row = mysqli_fetch_array($res))
-                /*initializes new variable and assigns a value to it*/
-                /*this helps fetch one of the rows of data and returns it as an associative array*/
-                /*the while loop means that every row will eventually be fetched until there are none left*/
-                /*this array does not only store the numeric indices but also the names, so they be targeted more easily*/
-                // if row is fetched while code is executed
-            {
-                ?>
-                <!--this while loop is what outputs all the products in the database. Using php statements all the
-                products are output using echo. All the products are fetched as an associative array so everything
-                can be fetched using names rather than numbers-->
-                <!--All the information fetched from the individual row from the array is output or echoed--><!---->
-                <div class="content" id="<?php echo $row["product_name"]; ?>">
-                    <!-- html and php used together so that products from the database are displayed -->
-                    <!--the product name of the row is fetched and used here-->
-                    <img src="<?php echo $row["product_image"]; ?>" alt="<?php echo $row["product_name"]; ?>"
-                         height="150px" class="product_img"/>
-                    <!--the product image path of the row is fetched and used here-->
-                    <!-- image source is fetched from the database, the location of the file is fetched and put inside the quotation marks -->
-                    <h2 class="product_h2">£<?php echo $row["product_price"]; ?></h2>
-                    <!-- product price is grabbed from the column -->
-                    <p class="product_p"><?php echo $row["product_name"]; ?></p>
-                    <!-- as well as the product name, for now I am not displaying the product description but just the information required for the display -->
-                    <form id="addBasket" action="" method="get">
-                        <!--hidden input field so when the user adds something to basket the product id for that
-                        individual product can be used.-->
-                        <input type="hidden" name="prodID" id="prodID" value="<?php echo $row["id"]; ?>">
-                        <input type="hidden" name="prodQuantity" id="prodQuantity" value="1">
-                        <button type="basket" class="add-button">Add Product</button>
-                    </form>
-                </div>
-                <?php
-            }
-            ?>
+        </div>
         </div>
     </div>
 </div>
+        <!--SEARCH BAR-->
+
+        <!--PRODUCTS-->
+
+
+
+
 <!--PRODUCTS-->
 
 <?php require "footer.php"; ?>
