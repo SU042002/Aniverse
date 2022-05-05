@@ -97,6 +97,9 @@ the website-->
             used to search the database for products.-->
             <?php
             if (strpos($_SERVER['REQUEST_URI'], "search") !== false) {
+                /*if the url contains search then this is executed, if = to true*/
+                /*if the url contains a search query this is executed*/
+                /*if the url does not contain a search in the url then all the products are shown using an else*/
                 if (isset($_GET['search'])) {
                     $searchQuery = $_GET['search'];
 
