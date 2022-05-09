@@ -4,6 +4,8 @@ if (!(isset($_SESSION["basket"]))) {
     /*if the shopping basket does not exist then make one*/
     /*creates an array for basket items*/
     $_SESSION["basket"]=array();
+//    index => value
+//    item => quantity
 }
 
 /*if the submit button for add to basket has been pressed*/
