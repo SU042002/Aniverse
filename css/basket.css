@@ -32,3 +32,12 @@
     margin-top: 14px;
 }
 /*this allows for some space between the buttons*/
+
+.delete_item {
+    background: linear-gradient(to right, #FE8C68, #FF0000);
+    display: block;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+}

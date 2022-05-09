@@ -58,6 +58,12 @@ require_once "php/basket_functions.php";
                     <td>£{$row["product_price"]}</td>
                     <td>$quantity</td>
                     <td>£$subTotal</td>
+                    <td>
+                        <form id='addBasket' action='' method='get'>
+                            <button class='delete_item'>Delete Item</button>
+                            <input type='hidden' name='id' value={$row["id"]}>
+                        </form>
+                    </td>
                 </tr>
             ";
         }

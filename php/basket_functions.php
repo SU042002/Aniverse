@@ -35,3 +35,15 @@ if(isset($_POST ["clear_basket"])) {
     header("location: basket.php?clear=success");
 }
 
+//if delete item is pressed
+if(isset($_GET["id"])) {
+    $id = $_GET["id"];
+//    echo $id;
+    unset($_SESSION['basket'][$id]);
+    /*removes item from the array using key/index as id*/
+    header("location: basket.php?clear=deletedItem");
+    /*redirects to prevent refreshing*/
+}
+
+
+
